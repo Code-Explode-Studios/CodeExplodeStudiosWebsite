@@ -1,827 +1,1403 @@
-/*GENRAL STYLING*/
+/* 
+=============================================
+GENERAL STYLING SECTION
+This section contains global styles that affect 
+the entire document and basic element styling
+=============================================
+*/
 
-/*GLOBAL STYLING*/
-html{
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
+/* 
+HTML ELEMENT STYLING
+Sets base styles for the root HTML element 
+that affect the entire document
+*/
+html {
+    height: 100%; /* Ensures HTML element takes full viewport height */
+    width: 100%; /* Ensures HTML element takes full viewport width */
+    box-sizing: border-box; /* Includes padding/border in element dimensions */
 }
+
+@font-face {
+    font-family: 'Funnel Sans Local'; /* Choose a name for your font */
+    src: url('./FONTS/FUNNEL SANS.ttf') format('truetype'); /* Correct path with capital 'F' */
+    /* You might want to include other font formats if you have them */
+    /* e.g., src: url('./Fonts/FUNNEL SANS.woff2') format('woff2'); */
+}
+/* 
+BODY STYLING
+Main container for all visible page content
+Sets default font, colors, and background image
+*/
 body {
-    font-family: 'Don Graffiti', cursive;
-    background-color: black;
-    color: yellow;
-    margin: 0 auto;
-    padding: 0;
-    min-height: 100%;
-    min-width: 100%;
-    background-image: url('./IMAGES/BACKGROUND.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: inherit;
-    position: relative;
-    padding-bottom: 6.74rem;
-}
-nav {    
-    background-color: #262a2b;
-    overflow: hidden;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;   
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    /* Explanation: This styling is applied to the unordered list (ul) within the navbar. It removes default bullet points, margin, and padding, and sets the display to flex to enable flexbox layout. It evenly distributes items horizontally and allows the list to grow to fill the remaining space. */
-}
-nav li {
-    margin: 0;        
-}
-nav li a {
-    color: yellow;
-    text-decoration: none;
-    padding: 14px 16px;
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    margin: 0;
-/* Explanation: This styling is applied to the anchor elements (links) within the navbar list items. It sets the color, removes underlines, adds padding for better appearance, aligns items vertically, and adjusts the font size. */
-}
-nav li a:hover {
-    animation: grow-shrink 0.5s infinite alternate;
-    animation: glowContinuous 0.8s linear infinite;
-    text-decoration: none;
-    transform: scale(1.3);
-/* Explanation: This styling is applied to the anchor elements (links) within list items in the navbar when hovered over. It changes the background color to dark blue, adds underline on hover, and increases the size by 20% using a scale transformation. */
+    font-family: 'Funnel Sans Local', sans-serif; /* Use the font name you defined */
+    background-color: black; /* Primary background color */
+    color: yellow; /* Default text color */
+    margin: 0 auto; /* Centers body horizontally if width is set */
+    padding: 0; /* Removes default padding */
+    min-height: 100%; /* Ensures body fills viewport height */
+    min-width: 100%; /* Ensures body fills viewport width */
+    /*
+        background-image: url('./IMAGES/BACKGROUND.png'); /* Full-page background image 
+
+    */
+    background-size: cover; /* Scales image to cover entire element */
+    background-attachment: fixed; /* Background stays fixed during scrolling */
+    background-repeat: no-repeat; /* Prevents image repeating */
+    background-position: center; /* Centers background image */
+    box-sizing: inherit; /* Inherits box model from HTML */
+    position: relative; /* Establishes positioning context */
+    padding-bottom: 6.74rem; /* Creates space for footer */
 }
 
-/*CLASSES*/
-
-/*GLOBAL CLASSES*/
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 999;
-    background-color: #262a2b;
-    opacity: 0.98;
-    backdrop-filter: blur(10px);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: center;
-    padding-left: calc(100% - 200px);
-}
-.sidebar li{   
-    height: 100%;
-    width: 100%;
-}
-.sidebar a {
-    justify-content:center;
-    margin: 1rem;  
-    height: 100%;
-    width: 100%;
-}
-.logo {
-    height: 50px;
-    margin-right: 20px;
-/* Explanation: This styling is applied to elements with the class "logo". It adjusts the height of the logo and adds some margin to the right side, creating space between the logo and other elements, such as links. */
-}
-.logo:hover {
-    transform: scale(1.5);
-    transition: transform 0.3s ease;
-}
-.usericon-container {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-/* Explanation: This style defines the appearance of a container for a user icon. It sets the width and height to 40 pixels, uses flexbox layout to center the content horizontally and vertically. */
-}
-.usericon-container img {
-    max-width: 100%;
-    max-height: 100%;
-/* Explanation: This style is applied to the user icon image inside its container. It ensures that the image remains responsive within its container by setting its maximum width and height to 100% of the container's dimensions. */
-}
-.title-container {
-    text-align: center;
-    padding: 0px 0;
-    border-bottom: 0px solid yellow;
-    font-size: 24px;
-    text-align: center;
-    animation: glowContinuous 3s linear infinite;
-/* Explanation: This class styles the container for the title. It centers the text horizontally within the container, adds padding to the top and bottom, and adds a border at the bottom. */
-}
-.subtitle-container {
-    width: 60%;
-    margin: 0 auto;
-    text-align: justify;
-    padding: 0px;
-    border: 0px solid yellow;
-    font-size: 22px;
-    text-decoration: underline;
-    animation: grow-shrink 0.5s infinite alternate;
-/* Explanation: This style defines the appearance of a container for the "What's New" section. It sets the width to 60% of its parent element, centers it horizontally, justifies the text, adds padding, creates a border (but with 0px width, effectively removing it), sets the font size to 22 pixels, adds underline on hover, and applies a shrinking and growing animation. */
-}
-.paragraph-container {
-    width: 60%;
-    margin: 0 auto;
-    text-align: justify;
-    border: 0px solid yellow;
-    font-size: 22px;
-/* Explanation: This style defines the appearance of a container for paragraphs. It sets the width to 60% of its parent element, centers it horizontally, justifies the text, adds padding, creates a border (but with 0px width, effectively removing it), and sets the font size to 22 pixels. */
-}
-.footer-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.footer-container p {
-    margin: 0;
-    font-size: 22px;
-    width: 100%;
-    text-align: center;
-}
-.golbalsubtext-container{
-    font-size: 22px;
+/* 
+MAIN NAVIGATION BAR
+Contains logo, navigation links, and user icon
+Uses flexbox for responsive layout
+*/
+nav {
+    background-color: #262a2b; /* Dark gray navigation background */
+    overflow: hidden; /* Prevents content overflow */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Spaces items evenly */
 }
 
-/*WHATS NEW CLASSES*/
-
-.whatsnewtext-container {
-    width: 100%;
-    margin: 0;
-    text-align: justify; 
-    text-decoration: underline;
-    animation: colorChangeContinuous 1s linear infinite;
-/* Explanation: This style defines the appearance of a container for the "What's New" section. It sets the width to 60% of its parent element, centers it horizontally, justifies the text, adds padding, creates a border (but with 0px width, effectively removing it), sets the font size to 22 pixels, adds underline on hover, and applies a shrinking and growing animation. */
-}
-.whatsnewimage-container {
-    width: 100%;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-/* Explanation: This style defines a container for images, using flexbox layout to horizontally align the images at the center. It also adds a margin to the top of the container. */
-}
-.whatsnewimage-container img {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 600px;
-    width: 100%;
-    height: auto;
-/* Explanation: This style specifies the appearance of images within the image container. It sets a fixed width for the images while maintaining their aspect ratio. Additionally, it adds margin to the left and right of the images to create spacing between them. */
-}
-.whatsnewimage-container img:hover {
-    transform: scale(1.3);
-    transition: transform 0.3s ease;
-}
-
-/*OTHER STUFF CLASSES*/
-
-.othersoftware-container {
-    gap: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;   
-    margin: 2.5rem;
-}
-.othersoftware-item {
-    width: 200px;
-    flex-grow: 1;
-    max-width: 300px;
-    height: auto;
-    border: 5px solid black;
-    border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    background-color: #262a2b
-}
-.othersoftware-item h2 {
-    font-size: 36px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.othersoftware-item img {
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-}
-.othersoftware-item:hover {
-    transform: scale(1.3);
-}
-
-/*GAMES CLASSES*/
-
-.gamesection-container {
-    gap: 2.5rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-}
-.gamesection-item {
-    width: 300px;
-    flex-grow: 1;
-    max-width: 600px;
-    height: auto;
-    border: 5px solid black;
-    border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    text-align: center;
-    margin: 50px;
-    transition: transform 0.3s ease;
-    background-color: #262a2b
-}
-.gamesection-item:hover {
-    transform: scale(1.3);
-}
-.gamesection-item img {
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-}
-.gamesection-item h2 {
-    font-size: 36px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/*FORUMS CLASSES*/
-
-.forums-container {
-    display: flex;
-    justify-content: center;
-}
-
-/*ABOUT US CLASSES*/
-
-.aboutus-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-}
-.aboutus-container p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1000px;
-    line-height: 1.5;
-}
-
-/*CONTACT US CLASSES*/
-
-.contactus-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-}
-.contactus-content {
-    margin-top: 200px;
-}
-.contactus-container p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1000px;
-    line-height: 1.5;
-}
-.contactus-container img {
-    width: 200px;
-    height: auto;
-    margin: auto;
-}
-
-/*DEKTOP APPLICATIONS CLASSES*/
-.desktopsoftwaresection-container {
-    gap: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin: auto;
-}
-.desktopsoftware-item {
-    width: 200px;
-    flex-grow: 1;
-    max-width: 300px;
-    height: auto;
-    border: 5px solid black;
-    border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    text-align: center;
-    margin: 0px;
-    transition: transform 0.3s ease;
-    background-color: #262a2b
-}
-.desktopsoftware-item:hover {
-    transform: scale(1.1);
-}
-.desktopsoftware-item img {
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-}
-.desktopsoftware-item h2 {
-    font-size: 36px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/*GAME PAGE CONTENT CLASSES*/
-
-.gamecontent-container {
-    padding-top: 5rem;
-    flex-wrap:wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center; 
-}
-.gamecontent-container video {
-    display: flex;
-    align-content: center;
-    max-width: 720px;
-    width: 100%;
-    height: auto;
-    position: relative;
-    margin: 2.5rem;
-}
-.gamecontent-container img {
-    max-width: 720px;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-.gamecontent-container p {
-    align-content: center;
-}
-.gamedescription-section {
-    padding-top: 50px;
-    display: flex;
-    margin: auto;
-    max-width: 1600px;
-    line-height: 1.5;
-}
-.gameplatforms-container {
-    font-size: 24px;
-}
-.slider-wrapper {
-    position: center;
-    max-width: 8rem;
-    width: 100%;
-    justify-content:center;
-}
-.slider {
-    margin: 2.5rem;
-    width: 100%;
-    max-width: 720px;
-    height: auto;
-    display: flex;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-.slider-nav {   
-    display: flex;
-    column-gap: 2rem;
-    position: relative;
-    justify-content: center;
-    bottom: 5rem;
-}
-.slider-nav a {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: #edff00
+    /* 
+NAVIGATION UNORDERED LIST
+Container for navigation links
+Removes default list styling and uses flexbox
+*/
+    nav ul {
+        list-style-type: none; /* Removes bullet points */
+        margin: 0; /* Removes default margin */
+        padding: 0; /* Removes default padding */
+        display: flex; /* Enables flexbox layout */
+        justify-content: space-between; /* Spaces items evenly */
+        flex-grow: 1; /* Allows list to expand and fill space */
     }
-.slider-nav a:hover {
-    transform: scale(1.5);
-    transition: transform 0.3s ease;
-}
-.slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
+
+    /* 
+NAVIGATION LIST ITEMS
+Individual items in the navigation list
+*/
+    nav li {
+        margin: 0; /* Removes default margin */
+    }
+
+        /* 
+NAVIGATION LINKS
+Styled anchor tags within navigation
+Includes hover effects and transitions
+*/
+        nav li a {
+            color: yellow; /* Link text color */
+            text-decoration: none; /* Removes underline */
+            padding: 14px 16px; /* Clickable area padding */
+            display: flex; /* Enables flexbox for alignment */
+            align-items: center; /* Vertically centers link contents */
+            font-size: 20px; /* Link text size */
+            margin: 0; /* Removes margin */
+        }
+
+            /* 
+NAV LINK HOVER EFFECTS
+Animation and styling when hovering over nav links
+*/
+            nav li a:hover {
+                animation: grow-shrink 0.8s infinite alternate; /* Pulsing animation */
+                animation: glowContinuous 0.8s linear infinite; /* Glowing text effect */
+                text-decoration: none; /* Underlines on hover */
+                transform: scale(1.3); /* Enlarges link */
+            }
+
+/* 
+=============================================
+CLASS-BASED STYLING SECTION
+Reusable component styles used throughout site
+=============================================
+*/
+
+/* 
+MOBILE SIDEBAR MENU
+Hidden by default, appears on mobile devices
+Fixed position overlay with blur effect
+*/
+.sidebar {
+    position: fixed; /* Stays in place during scroll */
+    top: 0; /* Anchors to top */
+    right: 0; /* Anchors to right */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    z-index: 999; /* Stacks above other content */
+    background-color: #262a2b; /* Dark gray background */
+    opacity: 0.98; /* Slightly transparent */
+    backdrop-filter: blur(10px); /* Background blur effect */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Vertical stacking */
+    align-items: flex-start; /* Left-aligns items */
+    justify-content: flex-start; /* Aligns to top */
+    text-align: center; /* Centers text */
+    padding-left: calc(100% - 200px); /* Calculated padding */
 }
 
-/*GAME DOWNLOAD BUTTON CLASSES*/
+    /* 
+SIDEBAR LIST ITEMS
+Full-width items in mobile menu
+*/
+    .sidebar li {
+        height: 100%; /* Full height items */
+        width: 100%; /* Full width items */
+    }
 
-.downloadbutton-container {
+    /* 
+SIDEBAR LINKS
+Styled links in mobile menu
+*/
+    .sidebar a {
+        justify-content: center; /* Centers content */
+        margin: 1rem; /* Spacing around links */
+        height: 100%; /* Full height */
+        width: 100%; /* Full width */
+    }
+
+/* 
+SITE LOGO
+Main logo styling in header
+*/
+.logo {
+    height: 60px; /* Fixed height */
+    margin-right: 50px; /* Spacing from nav items */
+}
+
+    /* 
+LOGO HOVER EFFECT
+Interactive scaling on hover
+*/
+    .logo:hover {
+        transform: scale(1.5); /* Enlarges logo */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
+
+/* 
+USER ICON CONTAINER
+Circular container for profile icon
+*/
+.usericon-container {
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+    /* 
+USER ICON IMAGE
+Ensures proper sizing of profile image
+*/
+    .usericon-container img {
+        max-width: 100%; /* Constrains to container */
+        max-height: 100%; /* Constrains to container */
+    }
+
+/* 
+TITLE CONTAINER
+Styles for page/section titles
+*/
+.title-container {
+    text-align: center; /* Centers text */
+    padding: 0px 0; /* No padding */
+    border-bottom: 0px solid yellow; /* Border option */
+    font-size: 24px; /* Text size */
+    animation: none; /* Glowing effect */
+}
+
+/* 
+SUBTITLE CONTAINER
+Styles for secondary headings
+*/
+.subtitle-container {
+    width: 60%; /* Constrained width */
+    margin: 0 auto; /* Centers container */
+    text-align: justify; /* Justified text */
+    padding: 0px; /* No padding */
+    border: 0px solid yellow; /* Border option */
+    font-size: 24px; /* Text size */
+    text-decoration: none; /* Underlined text */
+    animation: none; /* Pulsing animation */
+}
+
+/* 
+PARAGRAPH CONTAINER
+Standard text content styling
+*/
+.paragraph-container {
+    width: 60%; /* Constrained width */
+    margin: 0 auto; /* Centers container */
+    text-align: justify; /* Justified text */
+    border: 0px solid yellow; /* Border option */
+    font-size: 22px; /* Text size */
+}
+
+/* 
+FOOTER CONTAINER
+Styles for page footer
+*/
+.footer-container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Centers container */
+}
+
+    /* 
+FOOTER PARAGRAPHS
+Text styling within footer
+*/
+    .footer-container p {
+        margin: 0; /* No margin */
+        font-size: 22px; /* Text size */
+        width: 100%; /* Full width */
+        text-align: center; /* Centered text */
+        line-height: 0.8; /* Tighter line spacing */
+    }
+
+/* 
+GLOBAL SUBTEXT
+Standard styling for secondary text
+*/
+.golbalsubtext-container {
+    font-size: 22px; /* Text size */
+}
+
+/* 
+=============================================
+WHAT'S NEW SECTION STYLES - MATCHING OTHER SOFTWARE
+Featured content boxed images styling
+=============================================
+*/
+
+/* 
+WHATS NEW CONTAINER
+Flexbox container like othersoftware-container
+*/
+.whatsnewimage-container {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow boxes to wrap to next line */
+    justify-content: center; /* Center boxes horizontally */
+    gap: 20px; /* Spacing between boxes */
+    padding: 20px; /* Some padding around */
+    max-width: 1800px; /* Optional max width */
+    margin: 0 auto; /* Center container on page */
+}
+
+
+/* 
+WHATS NEW ITEM
+Each image inside its own boxed card just like othersoftware-item
+*/
+.whatsnew-item {
+    box-sizing: border-box; /* THIS IS THE MAGIC FIX */
+    width: calc(33.33% - 20px);
+    padding: 5px; /* Shrink the padding so images have more space */
+    width: 550px; /* Fixed width like othersoftware-item */
+    height: 320px; /* Fixed height for consistent boxes */
+    background-color: #262a2b; /* Same dark background */
+    border: 4px solid black; /* Same thick border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Same shadow */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: center; /* Center image vertically */
+    align-items: center; /* Center image horizontally */
+    padding: 1rem; /* Inner padding */
+    transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover */
+    text-align: center; /* Center text if any */
+}
+
+    /* 
+WHATS NEW IMAGE
+Style the image inside the box
+*/
+    .whatsnew-item img {
+        width: 100%; /* Image fills the container width */
+        height: auto; /* Keep aspect ratio */
+        display: block; /* Remove tiny gaps below images */
+        border-radius: 4px; /* Keep edges smooth */
+    }
+
+
+    /* 
+WHATS NEW ITEM HOVER
+Hover effect same as othersoftware-item hover
+*/
+    .whatsnew-item:hover {
+        transform: scale(1.1); /* Scale up on hover */
+        background-color: forestgreen; /* Background color change */
+    }
+
+
+/* 
+=============================================
+OTHER SOFTWARE SECTION STYLES
+Product showcase styling
+=============================================
+*/
+
+/* 
+OTHER SOFTWARE CONTAINER
+Flexbox grid for product cards
+*/
+.othersoftware-container {
+    display: flex; /* Enables flexbox for layout */
+    flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+    justify-content: center; /* Horizontally centers all cards */
+    align-items: flex-start; /* Aligns cards to the top of each row */
+    gap: 2.5rem; /* Spacing between each card */
+    padding: 2rem; /* Padding around the grid */
+    width: 100%; /* Full width of the parent */
+    max-width: 1800px; /* Stops it gettin' stupid wide on big screens */
+    margin: 0 auto; /* Centers the whole container in the page */
+}
+
+/* 
+OTHER SOFTWARE ITEMS
+Individual product card styling
+*/
+.othersoftware-item {
+    width: 450px; /* Fixed width so all cards match */
+    height: 400px; /* Fixed height to keep that square look */
+    background-color: #262a2b; /* Dark background for edginess */
+    border: 4px solid black; /* Thick black border round the box */
+    border-radius: 10px; /* Slight rounding on corners to soften it up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sexy dark shadow for some depth */
+    text-align: center; /* Centers all text inside the card */
+    display: flex; /* Lets us lay out content vertically */
+    flex-direction: column; /* Stack the contents vertically (title > img > text) */
+    justify-content: space-between; /* Space out the content top to bottom */
+    padding: 1rem; /* Inner spacing so content doesn’t kiss the edges */
+    transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
+}
+
+    /* 
+OTHER SOFTWARE HEADINGS
+Title styling within product cards
+*/
+    .othersoftware-item h2 {
+        font-size: 1.4rem; /* Reasonably chunky font size for titles */
+        margin: 0.5rem 0; /* Space above and below the title */
+    }
+
+    /* 
+OTHER SOFTWARE IMAGES
+Product image styling
+*/
+    .othersoftware-item img {
+        max-width: 100%; /* Makes sure the image never overflows the box */
+        max-height: 200px; /* Caps height so it doesn't dominate the box */
+        object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
+        border-radius: 6px; /* Slight rounding so it matches the card */
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+
+    /* 
+OTHER SOFTWARE HOVER
+Interactive effect for product cards
+*/
+    .othersoftware-item:hover {
+        transform: scale(1.1); /* Make it pop out slightly */
+        background-color: forestgreen; /* Darkens background slightly on hover */
+    }
+
+/* 
+=============================================
+GAMES SECTION STYLES
+Game showcase styling
+=============================================
+*/
+
+/*  
+GAMES SECTION CONTAINER  
+Main flex container that acts like a grid for game cards  
+*/
+.gamesection-container {
+    display: flex; /* Enables flexbox for layout */
+    flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+    justify-content: center; /* Horizontally centers all cards */
+    align-items: flex-start; /* Aligns cards to the top of each row */
+    gap: 2.5rem; /* Spacing between each card */
+    padding: 2rem; /* Padding around the grid */
+    width: 100%; /* Full width of the parent */
+    max-width: 1800px; /* Stops it gettin' stupid wide on big screens */
+    margin: 0 auto; /* Centers the whole container in the page */
+}
+
+/*  
+GAMES SECTION ITEM  
+Each game card styling (like a sexy icon box)  
+*/
+.gamesection-item {
+    width: 450px; /* Fixed width so all cards match */
+    height: 400px; /* Fixed height to keep that square look */
+    background-color: #262a2b; /* Dark background for edginess */
+    border: 4px solid black; /* Thick black border round the box */
+    border-radius: 10px; /* Slight rounding on corners to soften it up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sexy dark shadow for some depth */
+    text-align: center; /* Centers all text inside the card */
+    display: flex; /* Lets us lay out content vertically */
+    flex-direction: column; /* Stack the contents vertically (title > img > text) */
+    justify-content: space-between; /* Space out the content top to bottom */
+    padding: 1rem; /* Inner spacing so content doesn’t kiss the edges */
+    transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
+}
+
+    /*  
+GAMES SECTION ITEM HOVER  
+Interactive zoom effect when you hover your mouse over the card  
+*/
+    .gamesection-item:hover {
+        transform: scale(1.1); /* Make it pop out slightly */
+        background-color: forestgreen; /* Darkens background slightly on hover */
+    }
+
+    /*  
+GAMES SECTION HEADINGS  
+Styling for the game title text inside each card  
+*/
+    .gamesection-item h2 {
+        font-size: 26px; /* Reasonably chunky font size for titles */
+        margin: 0.5rem 0; /* Space above and below the title */            
+    }
+
+    /*  
+GAMES SECTION IMAGES  
+Styling for the game image thumbnail  
+*/
+    .gamesection-item img {
+        max-width: 100%; /* Makes sure the image never overflows the box */
+        max-height: 200px; /* Caps height so it doesn't dominate the box */
+        object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
+        border-radius: 6px; /* Slight rounding so it matches the card */
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+
+/*  
+GAMES SECTION SUBTEXT  
+Styling for the game description paragraph  
+*/
+.golbalsubtext-container p {
+    font-size: 1.5rem; /* Bit smaller text to fit more info in */
+    margin: 0.5rem 0 0; /* Tiny bit of space above, no bottom margin */
+    color: yellow; /* Make the title readable against dark background */
+}
+
+
+/* 
+=============================================
+FORUMS SECTION STYLES
+Discussion board styling
+=============================================
+*/
+
+/* 
+FORUMS CONTAINER
+Basic layout for forums section
+*/
+.forums-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+}
+
+/* 
+=============================================
+ABOUT US SECTION STYLES
+Company information styling
+=============================================
+*/
+
+/* 
+ABOUT US CONTAINER
+Layout for about us content
+*/
+.aboutus-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; /* Centered text */
+    margin: auto; /* Automatic margins */
+}
+
+    /* 
+ABOUT US PARAGRAPHS
+Text styling for about us content
+*/
+    .aboutus-container p {
+        display: flex; /* Enables flexbox */
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        max-width: 1000px; /* Maximum width */
+        line-height: 1.5; /* Line spacing */
+    }
+
+/* 
+=============================================
+CONTACT US SECTION STYLES
+Contact information and form styling
+=============================================
+*/
+
+/* 
+CONTACT US CONTAINER
+Layout for contact section
+*/
+.contactus-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; /* Centered text */
+    margin: auto; /* Automatic margins */
+}
+
+/* 
+CONTACT US CONTENT
+Spacing for contact content
+*/
+.contactus-content {
+    margin-top: 200px; /* Top spacing */
+}
+
+/* 
+CONTACT US PARAGRAPHS
+Text styling for contact content
+*/
+.contactus-container p {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    max-width: 1000px; /* Maximum width */
+    line-height: 1.5; /* Line spacing */
+}
+
+/* 
+CONTACT US IMAGES
+Styling for contact section images
+*/
+.contactus-container img {
+    width: 200px; /* Fixed width */
+    height: auto; /* Flexible height */
+    margin: auto; /* Automatic margins */
+}
+
+/* 
+=============================================
+DESKTOP APPLICATIONS SECTION STYLES
+Software showcase styling
+=============================================
+*/
+
+/* 
+DESKTOP SOFTWARE CONTAINER
+Flexbox grid for desktop apps
+*/
+.desktopsoftwaresection-container {
+    gap: 50px; /* Spacing between items */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    flex-wrap: wrap; /* Allows wrapping */
+    align-items: center; /* Centers vertically */
+    width: 100%; /* Full width */
+    margin: auto; /* Automatic margins */
+}
+
+/* 
+DESKTOP SOFTWARE ITEMS
+Individual app card styling
+*/
+.desktopsoftware-item {
+    width: 200px; /* Base width */
+    flex-grow: 1; /* Allows growing */
+    max-width: 300px; /* Maximum width */
+    height: auto; /* Flexible height */
+    border: 5px solid black; /* Border styling */
+    border-radius: 0px; /* No rounding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Shadow effect */
+    text-align: center; /* Centered content */
+    margin: 0px; /* No margin */
+    transition: transform 0.3s ease; /* Smooth transform */
+    background-color: #262a2b /* Dark background */
+}
+
+    /* 
+DESKTOP SOFTWARE HOVER
+Interactive effect for app cards
+*/
+    .desktopsoftware-item:hover {
+        transform: scale(1.1); /* Slight enlargement */
+    }
+
+    /* 
+DESKTOP SOFTWARE IMAGES
+App image styling
+*/
+    .desktopsoftware-item img {
+        overflow: hidden; /* Hides overflow */
+        width: 100%; /* Full width */
+        height: auto; /* Flexible height */
+        border-radius: 0px; /* No rounding */
+    }
+
+    /* 
+DESKTOP SOFTWARE HEADINGS
+Title styling within app cards
+*/
+    .desktopsoftware-item h2 {
+        font-size: 36px; /* Large text */
+        margin-top: 10px; /* Top spacing */
+        margin-bottom: 10px; /* Bottom spacing */
+    }
+
+/* 
+=============================================
+GAME PAGE CONTENT STYLES
+Individual game page components
+=============================================
+*/
+
+/* 
+GAME CONTENT CONTAINER
+Main container for game page content
+*/
+.gamecontent-container {
+    padding-top: 5rem; /* Top spacing */
+    flex-wrap: wrap; /* Allows wrapping */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    align-content: center; /* Centers content */
+}
+
+    /* 
+GAME CONTENT VIDEOS
+Styling for embedded game videos
+*/
+    .gamecontent-container video {
+        display: flex; /* Enables flexbox */
+        align-content: center; /* Centers content */
+        max-width: 720px; /* Maximum width */
+        width: 100%; /* Responsive width */
+        height: auto; /* Flexible height */
+        position: relative; /* Positioning context */
+        margin: 2.5rem; /* Outer spacing */
+    }
+
+    /* 
+GAME CONTENT IMAGES
+Styling for game screenshots
+*/
+    .gamecontent-container img {
+        max-width: 720px; /* Maximum width */
+        width: 100%; /* Responsive width */
+        height: auto; /* Flexible height */
+        overflow: hidden; /* Hides overflow */
+    }
+
+    /* 
+GAME CONTENT PARAGRAPHS
+Text styling for game descriptions
+*/
+    .gamecontent-container p {
+        align-content: center; /* Centers content */
+    }
+
+/* 
+GAME DESCRIPTION SECTION
+Container for detailed game info
+*/
+.gamedescription-section {
+    padding-top: 50px; /* Top spacing */
+    display: flex; /* Enables flexbox */
+    margin: auto; /* Automatic margins */
+    max-width: 1600px; /* Maximum width */
+    line-height: 1.5; /* Line spacing */
+}
+
+/* 
+GAME PLATFORMS CONTAINER
+Styling for platform availability
+*/
+.gameplatforms-container {
+    font-size: 24px; /* Text size */
+}
+#MediaPlayerContainer {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    background: #000;
+    overflow: hidden;
+    border: 3px solid #eee;
+    border-radius: 8px;   
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    color: black;
-}
-.downloadbutton {
-    margin: auto;
-    padding: 10px 20px;
-    background-color: yellow;
-    border: 3px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    color: black;
-    font-family: 'Don Graffiti', cursive;
-}
-.downloadbutton:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-    animation: glowContinuous 3s linear infinite;
+    align-items: center;
 }
 
-/*IDS*/
+    #MediaPlayerContainer iframe,
+    #MediaPlayerContainer img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        display: block;
+        border: none;
+    }
 
-/*GLOBAL IDS*/
-button#logosoundbutton {
-    border: none;
-    background: none;
-    padding: 0;
-}
-footer {
-    background-color: #262a2b;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    color: yellow;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-height: 80vh;
+.ArrowButton {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30, 30, 30, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 3.5rem;
+    cursor: pointer;
+    padding: 0 18px;
+    user-select: none;
+    z-index: 10;
+    border-radius: 3px;
+    transition: background 0.2s;
 }
 
-/*WHATS NEW IDS*/
+    .ArrowButton:hover {
+        background: forestgreen;
+        color: black;
+    }
 
+#LeftArrowButton {
+    left: 10px;
+    color: yellow;
+}
+
+#RightArrowButton {
+    right: 10px;
+    color: yellow;
+}
+
+
+/* 
+=============================================
+DOWNLOAD BUTTON STYLES
+Call-to-action button styling
+=============================================
+*/
+
+/* 
+DOWNLOAD BUTTON CONTAINER
+Wrapper for download CTA
+*/
+.downloadbutton-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    margin-top: 20px; /* Top spacing */
+    color: black; /* Text color */
+}
+
+/* 
+DOWNLOAD BUTTON
+Primary call-to-action button
+*/
+.downloadbutton {
+    margin: auto; /* Automatic margins */
+    padding: 10px 20px; /* Clickable area */
+    background-color: #262a2b; /* Dark background for edginess */
+    border: 3px solid black; /* Border styling */
+    border-radius: 5px; /* Slight rounding */
+    cursor: pointer; /* Pointer cursor */
+    color: black; /* Text color */
+    text-decoration: none; /* No underline, no messing */
+    transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
+}
+
+    /* 
+DOWNLOAD BUTTON HOVER
+Interactive effect for CTA
+*/
+    .downloadbutton:hover {
+        transform: scale(1.1); /* Make it pop out slightly */
+        transition: transform 0.3s ease; /* Smooth transition */   
+        background-color: forestgreen; /* Add this line to change the background */
+    }
+
+/* 
+=============================================
+ID-BASED STYLING SECTION
+Unique element styles referenced by ID
+=============================================
+*/
+
+/* 
+LOGO SOUND BUTTON
+Invisible button for logo sound effect
+*/
+button#logosoundbutton {
+    border: none; /* No border */
+    background: none; /* Transparent background */
+    padding: 0; /* No padding */
+}
+
+/* 
+PAGE FOOTER
+Site-wide footer styling
+*/
+footer {
+    background-color: #262a2b; /* Dark background */
+    padding-top: 20px; /* Top spacing */
+    padding-bottom: 20px; /* Bottom spacing */
+    text-align: center; /* Centered content */
+    color: yellow; /* Text color */
+    width: 100%; /* Full width */
+    left: 0; /* Anchors left */
+    right: 0; /* Anchors right */
+    bottom: 0; /* Anchors bottom */
+    height: 15px; /* Fixed height instead of max-height */
+    position: absolute; /* Fixed positioning */
+}
+
+
+/* 
+WHAT'S NEW HEADING
+Main title for featured content section
+*/
 #whats-new h2 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 30px;
-/* Explanation: This style defines the appearance of the heading within the "What's New" section. It sets the font size, aligns the text horizontally at the center, adds margin to the bottom of the heading, and applies a continuous animation effect. */
+    font-size: 36px; /* Large text */
+    text-align: center; /* Centered text */
+    margin-bottom: 30px; /* Bottom spacing */
 }
+
+/* 
+WHAT'S NEW SECTION
+Container for featured content
+*/
 #whatsnewsection {
-    padding: 20rem, 20rem;
-    text-align: center;
-    margin: 5rem;
-/* Explanation: This style defines the appearance of section containers on the webpage. It sets the padding to create space around the content and centers the content horizontally within each section. */
-}
-#whatsnewsection h2 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 100px;
-/* Explanation: This style defines the appearance of headings within section containers on the webpage. It sets the font size, aligns the text horizontally, adds margin to the bottom of the headings, and applies a continuous animation effect. */
-}
-#whatsnewsection p {       
-    line-height: 1.5;
-    text-align: center;
-/* Explanation: This style defines the appearance of paragraph elements within section containers on the webpage. It sets the font size, line height, and horizontally centers the text. */
+    padding: 20rem, 20rem; /* Large padding */
+    text-align: center; /* Centered content */
+    margin: 5rem; /* Outer spacing */
 }
 
-/*OTHER STUFF IDS*/
+    /* 
+WHAT'S NEW SECTION HEADING
+Title within featured section
+*/
+    #whatsnewsection h2 {
+        font-size: 36px; /* Large text */
+        text-align: center; /* Centered text */
+        margin-bottom: 100px; /* Large bottom spacing */
+    }
 
+    /* 
+WHAT'S NEW SECTION PARAGRAPHS
+Text styling in featured section
+*/
+    #whatsnewsection p {
+        line-height: 1.5; /* Line spacing */
+        text-align: center; /* Centered text */
+    }
+
+/* 
+OTHER SOFTWARE SECTION
+Container for additional products
+*/
 #othersoftwaresection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    display: flex; /* Enables flexbox */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-evenly; /* Even distribution */
+    align-items: center; /* Centers vertically */
 }
 
-/*PRIVACY POLICY IDS*/
-
+/* 
+PRIVACY POLICY SECTION
+Legal content container
+*/
 #privacy {
-    text-align: center;
-    margin-top: 50px;
-    padding: 0 5%;
-}
-#privacy h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-decoration: underline;
+    text-align: center; /* Centered content */
+    margin-top: 50px; /* Top spacing */
+    padding: 0 5%; /* Horizontal padding */
 }
 
-/*CONTACT US IDS*/
+    /* 
+PRIVACY POLICY HEADING
+Title for legal section
+*/
+    #privacy h2 {
+        font-size: 36px; /* Large text */
+        margin-bottom: 20px; /* Bottom spacing */
+        text-decoration: none; /* Underlined text */
+    }
+
+/* 
+CONTACT US SECTION
+Main container for contact page
+*/
 #contactus-section {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin: auto;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-content: center; /* Centers content */
+    align-items: center; /* Centers vertically */
+    margin: auto; /* Automatic margins */
 }
 
-/*GAMES IDS*/
+/* 
+GAMES SECTION
+Container for games showcase
+*/
 #games {
-    text-align: center;
-}
-#games h2 {
-    font-size: 36px;
-}
-#games img {
-    display: block;
-    margin: auto;
-    width: 400px;
-    height: auto;
-    margin: 0 10px;
+    text-align: center; /* Centered content */
 }
 
+    /* 
+GAMES SECTION HEADING
+Title for games showcase
+*/
+    #games h2 {
+        font-size: 36px; /* Large text */
+    }
 
+    /* 
+GAMES SECTION IMAGES
+Styling for game showcase images
+*/
+    #games img {
+        display: block; /* Block display */
+        margin: auto; /* Centers images */
+        width: 400px; /* Fixed width */
+        height: auto; /* Flexible height */
+        margin: 0 10px; /* Horizontal spacing */
+    }
 
+/* 
+=============================================
+ANIMATION DEFINITIONS
+Keyframe animations for interactive elements
+=============================================
+*/
 
-
-
-/* FUNCTIONAL STUFF */
-
-/* LOOP ANIMATIONS */
-
+/* 
+GROW/SHRINK ANIMATION
+Pulsing scale effect
+*/
 @keyframes grow-shrink {
     from {
-        transform: scale(1);
+        transform: scale(1); /* Normal size */
     }
 
     to {
-        transform: scale(1.1);
+        transform: scale(1.1); /* Slightly larger */
     }
 }
+
+/* 
+PULSE ANIMATION
+Gentle pulsing effect
+*/
 @keyframes pulse {
     0% {
-        transform: scale(1);
+        transform: scale(1); /* Normal size */
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.1); /* Slightly larger */
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1); /* Back to normal */
     }
 }
+
+/* 
+CONTINUOUS ROTATION
+Infinite spinning animation
+*/
 @keyframes rotateContinuous {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg); /* Starting position */
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg); /* Full rotation */
     }
 }
+
+/* 
+CONTINUOUS SCALING
+Pulsing size animation
+*/
 @keyframes scaleContinuous {
     0% {
-        transform: scale(1);
+        transform: scale(1); /* Normal size */
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.1); /* Slightly larger */
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1); /* Back to normal */
     }
 }
+
+/* 
+COLOR CHANGE ANIMATION
+Cycling through colors
+*/
 @keyframes colorChangeContinuous {
     0% {
-        color: red;
+        color: red; /* Red */
     }
 
     50% {
-        color: blue;
+        color: blue; /* Blue */
     }
 
     100% {
-        color: green;
+        color: green; /* Green */
     }
 }
+
+/* 
+FADE ANIMATION
+Fading in and out
+*/
 @keyframes fadeContinuous {
     0% {
-        opacity: 0;
+        opacity: 0; /* Invisible */
     }
 
     50% {
-        opacity: 1;
+        opacity: 1; /* Fully visible */
     }
 
     100% {
-        opacity: 0;
+        opacity: 0; /* Invisible again */
     }
 }
+
+/* 
+BOUNCE ANIMATION
+Up and down movement
+*/
 @keyframes bounceContinuous {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(0); /* Normal position */
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-20px); /* Moves up */
     }
 }
+
+/* 
+GLOW ANIMATION
+Pulsing glow effect
+*/
 @keyframes glowContinuous {
     0% {
-        text-shadow: 0 0 10px #fff;
+        text-shadow: 0 0 5px #1DB954, 0 0 10px #228B22;
     }
-
     50% {
-        text-shadow: 0 0 20px gold, 0 0 30px gold, 0 0 40px gold, 0 0 50px gold, 0 0 60px gold; /* Gold glow */
+        text-shadow: 0 0 10px #1DB954, 0 0 20px #228B22, 0 0 30px #006400, 0 0 40px #00FF66;
     }
-
     100% {
-        text-shadow: 0 0 10px #fff;
+        text-shadow: 0 0 5px #1DB954, 0 0 10px #228B22;
     }
 }
 
-/* ONE TIME USE ANIMATIONS */
 
+/* 
+FADE IN ANIMATION
+Element appears gradually
+*/
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0; /* Invisible */
     }
 
     to {
-        opacity: 1;
+        opacity: 1; /* Fully visible */
     }
 }
+
+/* 
+FADE OUT ANIMATION
+Element disappears gradually
+*/
 @keyframes fadeOut {
     from {
-        opacity: 1;
+        opacity: 1; /* Fully visible */
     }
 
     to {
-        opacity: 0;
+        opacity: 0; /* Invisible */
     }
 }
+
+/* 
+BOUNCE IN ANIMATION
+Element bounces into view
+*/
 @keyframes bounceIn {
     from {
-        transform: scale(0.3);
-        opacity: 0;
+        transform: scale(0.3); /* Very small */
+        opacity: 0; /* Invisible */
     }
 
     70% {
-        transform: scale(1.1);
+        transform: scale(1.1); /* Overshoots */
     }
 
     to {
-        transform: scale(1);
-        opacity: 1;
+        transform: scale(1); /* Normal size */
+        opacity: 1; /* Fully visible */
     }
 }
+
+/* 
+SLIDE IN FROM LEFT
+Element slides in from left
+*/
 @keyframes slideInLeft {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* Off-screen left */
     }
 
     to {
-        transform: translateX(0);
+        transform: translateX(0); /* Normal position */
     }
 }
+
+/* 
+ZOOM IN ANIMATION
+Element scales from small to normal
+*/
 @keyframes zoomIn {
     from {
-        transform: scale(0);
+        transform: scale(0); /* Invisible */
     }
 
     to {
-        transform: scale(1);
+        transform: scale(1); /* Normal size */
     }
 }
+
+/* 
+ROTATE ANIMATION
+Single full rotation
+*/
 @keyframes rotate {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg); /* Starting rotation */
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg); /* Full rotation */
     }
 }
 
-/* ANIMATION USAGE */
+/* 
+=============================================
+ANIMATION UTILITY CLASSES
+Ready-to-use animation classes
+=============================================
+*/
 
+/* 
+PULSE EFFECT
+Continuous gentle pulsing
+*/
 .pulse {
-    animation: pulse 1s infinite alternate;
-}
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-.fade-out {
-    animation: fadeOut 1s ease forwards;
-}
-.bounce-in {
-    animation: bounceIn 1s ease forwards;
-}
-.slide-in-left {
-    transform: translateX(-100%);
-    animation: slideInLeft 1s ease-in-out forwards;
-}
-.zoom-in {
-    transform: scale(0);
-    animation: zoomIn 0.5s ease-in-out forwards;
-}
-.rotate {
-    transform: rotate(0);
-    animation: rotate 1s linear forwards;
-}
-.rotate-continuous {
-    animation: rotateContinuous 2s linear infinite;
-}
-.scale-continuous {
-    animation: scaleContinuous 2s ease-in-out infinite;
-}
-.color-change-continuous {
-    animation: colorChangeContinuous 3s linear infinite;
-}
-.fade-continuous {
-    animation: fadeContinuous 2s ease infinite;
-}
-.bounce-continuous {
-    animation: bounceContinuous 2s ease infinite;
-}
-.glow-continuous {
-    animation: glowContinuous 3s linear infinite;
+    animation: pulse 1s infinite alternate; /* Repeating animation */
 }
 
-/* Media queries for mobile site */
+/* 
+FADE IN
+Element fades into view
+*/
+.fade-in {
+    opacity: 0; /* Starts invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Animates to visible */
+}
+
+/* 
+FADE OUT
+Element fades out of view
+*/
+.fade-out {
+    animation: fadeOut 1s ease forwards; /* Animates to invisible */
+}
+
+/* 
+BOUNCE IN
+Element bounces into view
+*/
+.bounce-in {
+    animation: bounceIn 1s ease forwards; /* Bounce animation */
+}
+
+/* 
+SLIDE IN FROM LEFT
+Element slides from left
+*/
+.slide-in-left {
+    transform: translateX(-100%); /* Starts off-screen */
+    animation: slideInLeft 1s ease-in-out forwards; /* Slides in */
+}
+
+/* 
+ZOOM IN
+Element scales up from small
+*/
+.zoom-in {
+    transform: scale(0); /* Starts small */
+    animation: zoomIn 0.5s ease-in-out forwards; /* Scales up */
+}
+
+/* 
+ROTATE
+Single rotation animation
+*/
+.rotate {
+    transform: rotate(0); /* Starting rotation */
+    animation: rotate 1s linear forwards; /* Rotates once */
+}
+
+/* 
+CONTINUOUS ROTATION
+Infinite spinning
+*/
+.rotate-continuous {
+    animation: rotateContinuous 2s linear infinite; /* Never stops */
+}
+
+/* 
+CONTINUOUS SCALING
+Pulsing size effect
+*/
+.scale-continuous {
+    animation: scaleContinuous 2s ease-in-out infinite; /* Continuous */
+}
+
+/* 
+COLOR CHANGE
+Cycling through colors
+*/
+.color-change-continuous {
+    animation: colorChangeContinuous 3s linear infinite; /* Continuous */
+}
+
+/* 
+FADE CONTINUOUS
+Fading in and out
+*/
+.fade-continuous {
+    animation: fadeContinuous 2s ease infinite; /* Continuous */
+}
+
+/* 
+BOUNCE CONTINUOUS
+Up and down movement
+*/
+.bounce-continuous {
+    animation: bounceContinuous 2s ease infinite; /* Continuous */
+}
+
+/* 
+GLOW CONTINUOUS
+Pulsing glow effect
+*/
+.glow-continuous {
+    animation: glowContinuous 3s linear infinite; /* Continuous */
+}
+
+/* 
+=============================================
+MOBILE RESPONSIVE STYLES
+Styles for screens under 728px wide
+=============================================
+*/
 @media screen and (max-width: 728px) {
+    /* Hide elements on mobile */
     .hideonmobile {
         display: none;
     }
 
+    /* Full-width mobile sidebar */
     .sidebar {
         width: 100%;
     }
 
+    /* Mobile navigation styling */
     nav {
-        background-color: #262a2b; /* Set background color */
-        overflow: hidden; /* Ensure contents don't overflow */
-        display: flex; /* Use flexbox layout */
-        align-items: center; /* Center items vertically */
-        justify-content: space-between; /* Evenly distribute items horizontally */
-        padding: 5px 5px; /* Add padding to the navbar */
+        background-color: #262a2b;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 5px;
         width: 100%;
-        margin: 0; /* Sets the margin of the list items to 0, removing any default margin */
+        margin: 0;
     }
+
+        /* Reversed mobile nav list */
         nav ul {
-            list-style-type: none; /* Remove default bullet points */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-            display: flex; /* Use flexbox layout */
-            justify-content: space-between; /* Evenly distribute items horizontally */
-            flex-grow: 1; /* Allow the flex item to grow to fill the remaining space */
-            flex-direction: row-reverse; /* Reverse the order of items horizontally */
-            margin: 0; /* Sets the margin of the list items to 0, removing any default margin */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            flex-direction: row-reverse;
+            margin: 0;
         }
+
+    /* Mobile title styling */
     .title-container {
-        text-align: center; /* Center the text within the container */
-        padding: 0px 0; /* Add padding to the top and bottom */
-        border-bottom: 0px solid yellow; /* Add a border at the bottom */
-        font-size: 24px; /* Sets the font size of h1 to 48 pixels */
-        text-align: center; /* Centers the text horizontally within its container */
+        text-align: center;
+        padding: 0px 0;
+        border-bottom: 0px solid yellow;
+        font-size: 24px;
+        text-align: center;
         animation: glowContinuous 3s linear infinite;
     }
 }
 
-/* Media queries for desktop site */
-@media screen and (min-width: 729px) {  
+/* 
+=============================================
+DESKTOP RESPONSIVE STYLES
+Styles for screens 729px and wider
+=============================================
+*/
+@media screen and (min-width: 729px) {
+    /* Hide elements on desktop */
     .hideondesktop {
         display: none;
     }
+
+    /* Desktop navigation styling */
     nav {
-        background-color: #262a2b; /* Set background color */
-        overflow: hidden; /* Ensure contents don't overflow */
-        display: flex; /* Use flexbox layout */
-        align-items: center; /* Center items vertically */
-        justify-content: space-between; /* Evenly distribute items horizontally */
-        padding: 5px 5px; /* Add padding to the navbar */       
-        margin: 0; /* Sets the margin of the list items to 0, removing any default margin */
+        background-color: #262a2b;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 5px;
+        margin: 0;
+        min-height: 20px; /* Explicit height control */
     }
+
+        /* Desktop nav list styling */
         nav ul {
-            list-style-type: none; /* Remove default bullet points */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-            display: flex; /* Use flexbox layout */
-            justify-content: space-between; /* Evenly distribute items horizontally */
-            flex-grow: 1; /* Allow the flex item to grow to fill the remaining space */
-           
-            margin: 0; /* Sets the margin of the list items to 0, removing any default margin */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin: 0;
         }
-
 }
-
-
