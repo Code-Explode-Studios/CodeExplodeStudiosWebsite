@@ -12,12 +12,12 @@
 <body>
     <nav>
         <a href="index.html">
-            <img src="./ICONS/CODE EXPLODE STUDIOS LOGO.jpg" alt="Code Explode Studios Logo" class="logo">
+            <img src="./ICONS/CODE EXPLODE STUDIOS LOGO V2.png" alt="Code Explode Studios Logo" class="logo">
         </a>
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><img src="./ICONS/CLOSE.png" height="46" viewbox="0 96 960 960" width="46"></a></li>
             <li><a href="./index.html">Whats New</a></li>
-            <li><a href="./Other Stuff.html">Other Stuff</a></li>
+            <li><a href="./Other Products And Services.html">Other Products And Services</a></li>
             <li><a href="Games.html">Games</a></li>
             <li><a href="./Forums.html">Forums</a></li>
             <li><a href="./Privacy Policy.html">Privacy Policy</a></li>
@@ -33,7 +33,7 @@
         </ul>
         <ul>
             <li class="hideonmobile"><a href="./index.html">Whats New</a></li>
-            <li class="hideonmobile"><a href="./Other Stuff.html">Other Stuff</a></li>
+            <li class="hideonmobile"><a href="./Other Products And Services.html">Other Products And Services</a></li>
             <li class="hideonmobile"><a href="Games.html">Games</a></li>
             <li class="hideonmobile"><a href="./Forums.html">Forums</a></li>
             <li class="hideonmobile"><a href="./Privacy Policy.html">Privacy Policy</a></li>
@@ -49,38 +49,25 @@
             </li>
         </ul>
     </nav>
-    <div class="title-container">
-        <h1>Code Explode Studios</h1>
-    </div>
     <div class="subtitle-container">
-        <h2 style="text-align: center;">Virus Gunner : Released 12/06/2020</h2>
+        <h2 style="text-align: center;">Virus Gunner : Released 12/06/2020 - Removed From Google Play Store 2024</h2>
     </div>
     <div class="gamecontent-container">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/_XoTFc-1r8c?si=v1i9deKHD2uazxJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="slide-wrapper">
-        <div class="slide-wrapper">
-            <div class="slider">
-                <img id="slide1" src="IMAGES/VIRUS GUNNER GAMEPLAY THUMBNAIL.png" alt="" />
-                <img id="slide2" src="IMAGES/VIRUS GUNNER GAMEPLAY 1.png" alt="" />
-                <img id="slide3" src="IMAGES/VIRUS GUNNER GAMEPLAY 2.png" alt="" />
-                <img id="slide4" src="IMAGES/VIRUS GUNNER GAMEPLAY 3.png" alt="" />
-            </div>
-            <div class="slider-nav">
-                <a href="#slide1"></a>
-                <a href="#slide2"></a>
-                <a href="#slide3"></a>
-                <a href="#slide4"></a>
-            </div>
-        </div>
-    </div>
-    <div class="gamedescription-section">
-        <div class="golbalsubtext-container">
-            <p>Introducing Virus Gunner, the thrilling shooter game where you play as a man on a mission to protect the world from deadly virus strains! Your job is to move around the lab and shoot medicine at incoming virus balls, stopping them from infiltrating your lab. With 50 exciting ranks to conquer, you'll unlock new power-ups that will aid you in your quest to save the world. Keep an eye out for crates that fall from the sky - when they hit the ground and break, they reveal a power-up that you can collect, such as ambulance ammo, a shield, a nuke, or a turret that fires autonomously at the enemy viruses.</p>
+        <div id="MediaPlayerContainer">
+            <iframe id="MediaIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <img id="MediaImage" alt="Virus Gunner Media Viewer" />
+            <button id="LeftArrowButton" class="ArrowButton">&#9664;</button>
+            <button id="RightArrowButton" class="ArrowButton">&#9654;</button>
         </div>
     </div>
     <div class="gamecontent-container">
         <div class="gameplatforms-container">
             <h2>Platfoms : Android</h2>
+        </div>
+    </div>
+    <div class="gamedescription-section">
+        <div class="golbalsubtext-container">
+            <p style="font-size: 24px;">Introducing Virus Gunner, the thrilling shooter game where you play as a man on a mission to protect the world from deadly virus strains! Your job is to move around the lab and shoot medicine at incoming virus balls, stopping them from infiltrating your lab. With 50 exciting ranks to conquer, you'll unlock new power-ups that will aid you in your quest to save the world. Keep an eye out for crates that fall from the sky - when they hit the ground and break, they reveal a power-up that you can collect, such as ambulance ammo, a shield, a nuke, or a turret that fires autonomously at the enemy viruses.</p>
         </div>
     </div>
     <div class="downloadbutton-container">
@@ -89,8 +76,9 @@
     </div>
     <footer>
         <div class="footer-container">
-            <p>&copy; Code Explode Studios 2024 &#8482;</p>
+            <p>&copy; Code Explode Studios 2025 &#8482;</p>
         </div>
     </footer>
+    <script src="./JavaScript/VIRUS GUNNER MEDIA PLAYER.js" defer></script>
 </body>
 </html>

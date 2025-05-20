@@ -7,17 +7,17 @@
     <link href="./FONTS/don-graffiti/Don-Graffiti.ttf" rel="stylesheet">
     <link rel="stylesheet" href="CSS CODE.css">
     <script src="./JAVASCRIPT/SIDEBAR.js"></script>
-    <script src="./JAVASCRIPT/SOUND EFFECTS.js" defer></script> 
+    <script src="./JAVASCRIPT/SOUND EFFECTS.js" defer></script>
 </head>
 <body>
     <nav>
         <a href="index.html">
-            <img src="./ICONS/CODE EXPLODE STUDIOS LOGO.jpg" alt="Code Explode Studios Logo" class="logo">
+            <img src="./ICONS/CODE EXPLODE STUDIOS LOGO V2.png" alt="Code Explode Studios Logo" class="logo">
         </a>
         <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><img src="./ICONS/CLOSE.png" height="46" viewbox="0 96 960 960" width="46"></a></li>
+            <li onclick=hideSidebar()><a href="#"><img src="./ICONS/CLOSE.png" height="46" width="46"></a></li>
             <li><a href="./index.html">Whats New</a></li>
-            <li><a href="./Other Stuff.html">Other Stuff</a></li>
+            <li><a href="./Other Products And Services.html">Other Products And Services</a></li>
             <li><a href="Games.html">Games</a></li>
             <li><a href="./Forums.html">Forums</a></li>
             <li><a href="./Privacy Policy.html">Privacy Policy</a></li>
@@ -33,11 +33,11 @@
         </ul>
         <ul>
             <li class="hideonmobile"><a href="./index.html">Whats New</a></li>
-            <li class="hideonmobile"><a href="./Other Stuff.html">Other Stuff</a></li>
+            <li class="hideonmobile"><a href="./Other Products And Services.html">Other Products And Services</a></li>
             <li class="hideonmobile"><a href="Games.html">Games</a></li>
             <li class="hideonmobile"><a href="./Forums.html">Forums</a></li>
             <li class="hideonmobile"><a href="./Privacy Policy.html">Privacy Policy</a></li>
-            <li class="hideonmobile"> <a href="./About Us.html">About us</a></li>
+            <li class="hideonmobile"><a href="./About Us.html">About us</a></li>
             <li class="hideonmobile"><a href="./Contact Us.html">Contact us</a></li>
             <li class="hideondesktop" onclick="showSidebar()"><a href="#"><img src="./ICONS/MENU.png" height="46" width="46"></a></li>
             <li class="hideonmobile">
@@ -49,36 +49,15 @@
             </li>
         </ul>
     </nav>
-    <div class="title-container">
-        <h1>Code Explode Studios</h1>
-    </div>
     <div class="subtitle-container">
-        <h2 style="text-align: center;">RC Renegades : In Beta</h2>
+        <h2 style="text-align: center;">RC Renegades : High Voltage : Development Paused</h2>
     </div>
     <div class="gamecontent-container">
-        <video controls>
-            <source src="VIDEOS/VIRUS GUNNER PROMO VIDEO.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="slide-wrapper">
-            <div class="slider">
-                <img id="slide1" src="IMAGES/RC RENEGADES GAMEPLAY THUMBNAIL.png" alt="" />
-                <img id="slide2" src="IMAGES/RC RENEGADES GAMEPLAY 1.png" alt="" />
-                <img id="slide3" src="IMAGES/RC RENEGADES GAMEPLAY 2.png" alt="" />
-                <img id="slide4" src="IMAGES/RC RENEGADES GAMEPLAY 3.png" alt="" />
-            </div>
-            <div class="slider-nav">
-                <a href="#slide1"></a>
-                <a href="#slide2"></a>
-                <a href="#slide3"></a>
-                <a href="#slide4"></a>
-            </div>
-        </div>
-    </div>
-    <div class="gamedescription-section">
-        <div class="golbalsubtext-container">
-            <p>Gear up your controllers and ignite the thrills in RC Renegades! Brace for heart-pounding action as you navigate your remote-controlled racers through electrifying courses packed with twists, turns, and pulse-pounding surprises. Take on rivals, both AI and human, in a high-octane battle for supremacy where every maneuver counts. With a mix of electric and nitro-powered RC cars, the competition is fierce, the stakes are high, and victory is anyone's game. So grab your controller, fine-tune your tactics, and prepare for an adrenaline-fueled ride like no other!</p>
-
+        <div id="MediaPlayerContainer">
+            <iframe id="MediaIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <img id="MediaImage" alt="RC Renegades Media Viewer" />
+            <button id="LeftArrowButton" class="ArrowButton">&#9664;</button>
+            <button id="RightArrowButton" class="ArrowButton">&#9654;</button>
         </div>
     </div>
     <div class="gamecontent-container">
@@ -86,15 +65,21 @@
             <h2>Platfoms : Android - Windows</h2>
         </div>
     </div>
+    <div class="gamedescription-section">
+        <div class="golbalsubtext-container">
+            <p>Gear up your controllers and ignite the thrills in RC Renegades! Brace for heart-pounding action as you navigate your remote-controlled racers through electrifying courses packed with twists, turns, and pulse-pounding surprises. Take on rivals, both AI and human, in a high-octane battle for supremacy where every maneuver counts. With a mix of electric and nitro-powered RC cars, the competition is fierce, the stakes are high, and victory is anyone's game. So grab your controller, fine-tune your tactics, and prepare for an adrenaline-fueled ride like no other!</p>
+        </div>
+    </div>
     <div class="downloadbutton-container">
-        <a href="./DOWNLOADS/RC RENEGADES.apk" class="downloadbutton">Direct Download</a>
-        <a href="" class="downloadbutton">Get from Google Play</a>
-        <a href="" class="downloadbutton">Get from Steam</a>
-    </div>   
+        <a href="./DOWNLOADS/RC RENEGADES.apk" class="downloadbutton">Direct Download Android Build</a>
+        <a href="#" class="downloadbutton">Get from Google Play</a>
+        <a href="#" class="downloadbutton">Get from Steam</a>
+    </div>
     <footer>
         <div class="footer-container">
-            <p>&copy; Code Explode Studios 2024 &#8482;</p>
+            <p>&copy; Code Explode Studios 2025 &#8482;</p>
         </div>
     </footer>
+    <script src="./JAVASCRIPT/RC RENEGADES MEDIA PLAYER.js" defer></script>
 </body>
 </html>

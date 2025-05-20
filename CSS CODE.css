@@ -374,7 +374,7 @@ Individual product card styling
     display: flex; /* Lets us lay out content vertically */
     flex-direction: column; /* Stack the contents vertically (title > img > text) */
     justify-content: space-between; /* Space out the content top to bottom */
-    padding: 1rem; /* Inner spacing so content doesnâ€™t kiss the edges */
+    padding: 1rem; /* Inner spacing so content doesn’t kiss the edges */
     transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
 }
 
@@ -446,7 +446,7 @@ Each game card styling (like a sexy icon box)
     display: flex; /* Lets us lay out content vertically */
     flex-direction: column; /* Stack the contents vertically (title > img > text) */
     justify-content: space-between; /* Space out the content top to bottom */
-    padding: 1rem; /* Inner spacing so content doesnâ€™t kiss the edges */
+    padding: 1rem; /* Inner spacing so content doesn’t kiss the edges */
     transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
 }
 
