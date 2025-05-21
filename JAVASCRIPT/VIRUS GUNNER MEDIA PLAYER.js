@@ -6,10 +6,10 @@ const RightArrowButton = document.getElementById('RightArrowButton');
 
 // Media list: images first, YouTube video last
 const MediaList = [
-  { Type: 'image', Src: 'IMAGES/VIRUS GUNNER GAMEPLAY THUMBNAIL.png' },
-  { Type: 'image', Src: 'IMAGES/VIRUS GUNNER GAMEPLAY 1.png' },
-  { Type: 'image', Src: 'IMAGES/VIRUS GUNNER GAMEPLAY 2.png' },
-  { Type: 'image', Src: 'IMAGES/VIRUS GUNNER GAMEPLAY 3.png' },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=10ih6nUM88Z26AYzFdXt_XGU9T5U98b6c&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1d1ioFfCgx9nZTLjvDqnXrNs1YOTfVoWU&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=13skoA9mPahYdd8w69VyFvvXW4HCKYq6j&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1poi19anLTzp9qUYS1Dz3cPNub_wO9pr8&sz=w640 },
   { Type: 'youtube', Src: 'https://www.youtube.com/embed/_XoTFc-1r8c?si=aKL-WGD86JjUK4LU' }
 ];
 

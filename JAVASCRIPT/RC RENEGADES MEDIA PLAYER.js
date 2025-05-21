@@ -6,10 +6,10 @@ const RightArrowButton = document.getElementById('RightArrowButton');
 
 // Media list for RC Renegades
 const MediaList = [
-  { Type: 'image', Src: 'IMAGES/RC RENEGADES GAMEPLAY THUMBNAIL.png' },
-  { Type: 'image', Src: 'IMAGES/RC RENEGADES GAMEPLAY 1.png' },
-  { Type: 'image', Src: 'IMAGES/RC RENEGADES GAMEPLAY 2.png' },
-  { Type: 'image', Src: 'IMAGES/RC RENEGADES GAMEPLAY 3.png' },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1s_-iRgKfvBEnQf0edg8LcFaNfU252cag&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1KrmHAHibRcTuKXkRxpL77q_rmHfDK4IC&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1yxbAdeF5kENSF9AEtFVSGXqfWfN_2-QA&sz=w640' },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1r-kHsuy9pyHOOIs94ZIsv-OqsobO7iEp&sz=w640 },
   { Type: 'youtube', Src: 'https://www.youtube.com/embed/REPLACE_THIS_WITH_REAL_VIDEO_LINK' } // Replace this later, fam
 ];
 

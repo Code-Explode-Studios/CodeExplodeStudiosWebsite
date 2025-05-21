@@ -6,11 +6,11 @@ const RightArrowButton = document.getElementById('RightArrowButton');
 
 // Public media list for Ash Vegas (images first, YouTube last)
 const MediaList = [
-  { Type: 'image', Src: 'IMAGES/ASH VEGAS GAMEPLAY THUMBNAIL.png' },
-  { Type: 'image', Src: 'IMAGES/COMING SOON THUMBNAIL.png' },
-  { Type: 'image', Src: 'IMAGES/COMING SOON THUMBNAIL.png' },
-  { Type: 'image', Src: 'IMAGES/COMING SOON THUMBNAIL.png' },
-  { Type: 'youtube', Src: 'https://www.youtube.com/embed/YOUR_ASH_VEGAS_VIDEO_ID_HERE' } // Change this to your actual vid
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=13fFyDKBgf7nZ_BhIMX4UZmFyH0_AfWcr&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640 },
+  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640 },
+  { Type: 'youtube', Src: 'https://www.youtube.com/embed/YOUR_GAME_VIDEO_ID_HERE' } // Change this to your actual vid
 ];
 
 // Public variable to track current index
