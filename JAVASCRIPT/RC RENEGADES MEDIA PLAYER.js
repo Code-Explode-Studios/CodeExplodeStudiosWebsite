@@ -1,4 +1,4 @@
-// Public variables for the media player
+// Public variables for the RC Renegades media player elements
 const MediaIframe = document.getElementById('MediaIframe');
 const MediaImage = document.getElementById('MediaImage');
 const LeftArrowButton = document.getElementById('LeftArrowButton');
@@ -6,11 +6,11 @@ const RightArrowButton = document.getElementById('RightArrowButton');
 
 // Media list for RC Renegades
 const MediaList = [
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1s_-iRgKfvBEnQf0edg8LcFaNfU252cag&sz=w640 },
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1KrmHAHibRcTuKXkRxpL77q_rmHfDK4IC&sz=w640 },
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1yxbAdeF5kENSF9AEtFVSGXqfWfN_2-QA&sz=w640' },
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1r-kHsuy9pyHOOIs94ZIsv-OqsobO7iEp&sz=w640 },
-  { Type: 'youtube', Src: 'https://www.youtube.com/embed/REPLACE_THIS_WITH_REAL_VIDEO_LINK' } // Replace this later, fam
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1s_-iRgKfvBEnQf0edg8LcFaNfU252cag&sz=w640' },
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1KrmHAHibRcTuKXkRxpL77q_rmHfDK4IC&sz=w640' },
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1yxbAdeF5kENSF9AEtFVSGXqfWfN_2-QA&sz=w640' },
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1r-kHsuy9pyHOOIs94ZIsv-OqsobO7iEp&sz=w640' },
+  { Type: 'youtube', Src: 'https://www.youtube.com/embed/REPLACE_THIS_WITH_REAL_VIDEO_LINK' }
 ];
 
 // Public variable for tracking current media

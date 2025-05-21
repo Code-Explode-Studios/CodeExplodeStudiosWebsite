@@ -1,4 +1,4 @@
-// Public variables for the Ash Vegas media player elements
+// Public variables for the The Backrooms No Escape media player elements
 const MediaIframe = document.getElementById('MediaIframe');
 const MediaImage = document.getElementById('MediaImage');
 const LeftArrowButton = document.getElementById('LeftArrowButton');

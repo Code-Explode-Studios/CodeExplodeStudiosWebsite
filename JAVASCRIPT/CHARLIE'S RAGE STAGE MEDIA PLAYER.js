@@ -1,4 +1,4 @@
-// Public variables for the Ash Vegas media player elements
+// Public variables for the Charlies Rage Stage media player elements
 const MediaIframe = document.getElementById('MediaIframe');
 const MediaImage = document.getElementById('MediaImage');
 const LeftArrowButton = document.getElementById('LeftArrowButton');
@@ -6,11 +6,11 @@ const RightArrowButton = document.getElementById('RightArrowButton');
 
 // Public media list for Charlies Rage Stage (images first, YouTube last)
 const MediaList = [
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640 },
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640 },
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640 },
-  { Type: 'image', Src: https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640 },
-  { Type: 'youtube', Src: 'https://www.youtube.com/embed/YOUR_GAME_VIDEO_ID_HERE' } // Change this to your actual vid
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640' },
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640' },
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640' },
+  { Type: 'image', Src: 'https://drive.google.com/thumbnail?id=1FeEi_NQR27Qlmotv5LHxxp1BLMzWbnSU&sz=w640' },
+  { Type: 'youtube', Src: 'https://www.youtube.com/embed/YOUR_GAME_VIDEO_ID_HERE' }
 ];
 
 // Public variable to track current index
