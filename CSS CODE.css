@@ -141,21 +141,11 @@ Fixed position overlay with blur effect
     padding-left: 10rem; /* Or any other desired pixel value */
     padding-top: 14rem;
 }
-
-    /* 
-SIDEBAR LIST ITEMS
-Full-width items in mobile menu
-*/
     .sidebar li {
         height: 100%; /* Full height items */
         width: 100%; /* Full width items */
     }
-
-    /* 
-SIDEBAR LINKS
-Styled links in mobile menu
-*/
-    .sidebar a {
+        .sidebar a {
         justify-content: flex-start; /* Change from flex-end to flex-start */
         margin-left: -7rem;
         margin-top: -14.6rem;
@@ -165,28 +155,15 @@ Styled links in mobile menu
         text-align: left; /* Add this to ensure text itself aligns left if it's not a flex item */
     }
 
-/* 
-SITE LOGO
-Main logo styling in header
-*/
 .logo {
     height: 3.125rem; /* Fixed height */
     margin-right: 50px; /* Spacing from nav items */
 }
-
-    /* 
-LOGO HOVER EFFECT
-Interactive scaling on hover
-*/
     .logo:hover {
         transform: scale(1.5); /* Enlarges logo */
         transition: transform 0.3s ease; /* Smooth transition */
     }
 
-/* 
-USER ICON CONTAINER
-Circular container for profile icon
-*/
 .usericon-container {
     width: 30px; /* Fixed width */
     height: 30px; /* Fixed height */
@@ -194,20 +171,11 @@ Circular container for profile icon
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
 }
-
-    /* 
-USER ICON IMAGE
-Ensures proper sizing of profile image
-*/
     .usericon-container img {
         max-width: 100%; /* Constrains to container */
         max-height: 100%; /* Constrains to container */
     }
 
-/* 
-TITLE CONTAINER
-Styles for page/section titles
-*/
 .title-container {
     text-align: center; /* Centers text */
     padding: 0px 0; /* No padding */
@@ -218,10 +186,6 @@ Styles for page/section titles
         font-size: 2.5rem; /* Text size */
     }
 
-/* 
-SUBTITLE CONTAINER
-Styles for secondary headings
-*/
 .subtitle-container {
     width: 60%; /* Constrained width */
     margin: 0 auto; /* Centers container */
@@ -276,6 +240,19 @@ Styles for secondary headings
         text-align: center; /* Centered text */
         line-height: 0.8; /* Tighter line spacing */
     }
+        footer {
+    background-color: #262a2b; /* Dark background */
+    padding-top: 20px; /* Top spacing */
+    padding-bottom: 20px; /* Bottom spacing */
+    text-align: center; /* Centered content */
+    color: yellow; /* Text color */
+    width: 100%; /* Full width */
+    left: 0; /* Anchors left */
+    right: 0; /* Anchors right */
+    bottom: 0; /* Anchors bottom */
+    height: 15px; /* Fixed height instead of max-height */
+    position: absolute; /* Fixed positioning */
+}
 
 .fullscreen-section {
     padding: 2rem, 2rem; /* Large padding */
@@ -421,101 +398,7 @@ Styles for secondary headings
             transform: scale(1.1); /* Make it pop out slightly */
             background-color: forestgreen; /* Darkens background slightly on hover */
         }
-    /*  
-GAMES SECTION SUBTEXT  
-Styling for the game description paragraph  
-*/
-    .golbalsubtext-container p {
-        font-size: 1.5rem; /* Bit smaller text to fit more info in */
-        margin: 0.5rem 0 0; /* Tiny bit of space above, no bottom margin */
-        color: yellow; /* Make the title readable against dark background */
-    }
 
-
-
-
-
-
-
-/* 
-=============================================
-DESKTOP APPLICATIONS SECTION STYLES
-Software showcase styling
-=============================================
-*/
-
-/* 
-DESKTOP SOFTWARE CONTAINER
-Flexbox grid for desktop apps
-*/
-.desktopsoftwaresection-container {
-    gap: 50px; /* Spacing between items */
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-    flex-wrap: wrap; /* Allows wrapping */
-    align-items: center; /* Centers vertically */
-    width: 100%; /* Full width */
-    margin: auto; /* Automatic margins */
-}
-
-/* 
-DESKTOP SOFTWARE ITEMS
-Individual app card styling
-*/
-.desktopsoftware-item {
-    width: 200px; /* Base width */
-    flex-grow: 1; /* Allows growing */
-    max-width: 300px; /* Maximum width */
-    height: auto; /* Flexible height */
-    border: 5px solid black; /* Border styling */
-    border-radius: 0px; /* No rounding */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Shadow effect */
-    text-align: center; /* Centered content */
-    margin: 0px; /* No margin */
-    transition: transform 0.3s ease; /* Smooth transform */
-    background-color: #262a2b /* Dark background */
-}
-
-    /* 
-DESKTOP SOFTWARE HOVER
-Interactive effect for app cards
-*/
-    .desktopsoftware-item:hover {
-        transform: scale(1.1); /* Slight enlargement */
-    }
-
-    /* 
-DESKTOP SOFTWARE IMAGES
-App image styling
-*/
-    .desktopsoftware-item img {
-        overflow: hidden; /* Hides overflow */
-        width: 100%; /* Full width */
-        height: auto; /* Flexible height */
-        border-radius: 0px; /* No rounding */
-    }
-
-    /* 
-DESKTOP SOFTWARE HEADINGS
-Title styling within app cards
-*/
-    .desktopsoftware-item h2 {
-        font-size: 36px; /* Large text */
-        margin-top: 10px; /* Top spacing */
-        margin-bottom: 10px; /* Bottom spacing */
-    }
-
-/* 
-=============================================
-GAME PAGE CONTENT STYLES
-Individual game page components
-=============================================
-*/
-
-/* 
-GAME CONTENT CONTAINER
-Main container for game page content
-*/
 .gamecontent-container {
     padding-top: 5rem; /* Top spacing */
     padding-bottom: 1rem;
@@ -527,11 +410,6 @@ Main container for game page content
     gap: 10px;
     padding: 10px;
 }
-
-    /* 
-GAME CONTENT VIDEOS
-Styling for embedded game videos
-*/
     .gamecontent-container video {
         display: flex; /* Enables flexbox */
         align-content: center; /* Centers content */
@@ -541,11 +419,6 @@ Styling for embedded game videos
         position: relative; /* Positioning context */
         margin: 2.5rem; /* Outer spacing */
     }
-
-    /* 
-GAME CONTENT IMAGES
-Styling for game screenshots
-*/
     .gamecontent-container img {
         max-width: 720px; /* Maximum width */
         width: 100%; /* Responsive width */
@@ -553,30 +426,6 @@ Styling for game screenshots
         overflow: hidden; /* Hides overflow */
     }
 
-    /* 
-GAME CONTENT PARAGRAPHS
-Text styling for game descriptions
-*/
-    .gamecontent-container p {
-        align-content: center; /* Centers content */
-    }
-
-/* 
-GAME DESCRIPTION SECTION
-Container for detailed game info
-*/
-.gamedescription-section {
-    padding-top: 50px; /* Top spacing */
-    display: flex; /* Enables flexbox */
-    margin: auto; /* Automatic margins */
-    max-width: 1600px; /* Maximum width */
-    line-height: 1.5; /* Line spacing */
-}
-
-/* 
-GAME PLATFORMS CONTAINER
-Styling for platform availability
-*/
 .gameplatforms-container {
     font-size: 24px; /* Text size */
 }
@@ -587,12 +436,11 @@ Styling for platform availability
     background: #000;
     overflow: hidden;
     border: 3px solid #eee;
-    border-radius: 8px;   
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
     #MediaPlayerContainer iframe,
     #MediaPlayerContainer img {
         width: 100%;
@@ -601,7 +449,6 @@ Styling for platform availability
         display: block;
         border: none;
     }
-
 .ArrowButton {
     position: absolute;
     top: 50%;
@@ -617,46 +464,27 @@ Styling for platform availability
     border-radius: 3px;
     transition: background 0.2s;
 }
-
     .ArrowButton:hover {
         background: forestgreen;
         color: black;
     }
-
 #LeftArrowButton {
     left: 10px;
     color: yellow;
 }
-
 #RightArrowButton {
     right: 10px;
     color: yellow;
 }
 
 
-/* 
-=============================================
-DOWNLOAD BUTTON STYLES
-Call-to-action button styling
-=============================================
-*/
-
-/* 
-DOWNLOAD BUTTON CONTAINER
-Wrapper for download CTA
-*/
 .downloadbutton-container {
     display: flex; /* Enables flexbox */
     justify-content: center; /* Centers horizontally */
     margin-top: 20px; /* Top spacing */
     color: black; /* Text color */
 }
-
-/* 
-DOWNLOAD BUTTON
-Primary call-to-action button
-*/
-.downloadbutton {
+    .downloadbutton {
     margin: auto; /* Automatic margins */
     padding: 10px 20px; /* Clickable area */
     background-color: #262a2b; /* Dark background for edginess */
@@ -667,127 +495,58 @@ Primary call-to-action button
     text-decoration: none; /* No underline, no messing */
     transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
 }
-
-    /* 
-DOWNLOAD BUTTON HOVER
-Interactive effect for CTA
-*/
-    .downloadbutton:hover {
+        .downloadbutton:hover {
         transform: scale(1.1); /* Make it pop out slightly */
-        transition: transform 0.3s ease; /* Smooth transition */   
+        transition: transform 0.3s ease; /* Smooth transition */
         background-color: forestgreen; /* Add this line to change the background */
     }
 
-/* 
-=============================================
-ID-BASED STYLING SECTION
-Unique element styles referenced by ID
-=============================================
-*/
-
-/* 
-LOGO SOUND BUTTON
-Invisible button for logo sound effect
-*/
 button#logosoundbutton {
     border: none; /* No border */
     background: none; /* Transparent background */
     padding: 0; /* No padding */
 }
 
-/* 
-PAGE FOOTER
-Site-wide footer styling
-*/
-footer {
-    background-color: #262a2b; /* Dark background */
-    padding-top: 20px; /* Top spacing */
-    padding-bottom: 20px; /* Bottom spacing */
-    text-align: center; /* Centered content */
-    color: yellow; /* Text color */
-    width: 100%; /* Full width */
-    left: 0; /* Anchors left */
-    right: 0; /* Anchors right */
-    bottom: 0; /* Anchors bottom */
-    height: 15px; /* Fixed height instead of max-height */
-    position: absolute; /* Fixed positioning */
-}
 
 
-/* 
-WHAT'S NEW HEADING
-Main title for featured content section
-*/
+
+
 #whats-new h2 {
     font-size: 36px; /* Large text */
     text-align: center; /* Centered text */
     margin-bottom: 30px; /* Bottom spacing */
 }
-
-/* 
-WHAT'S NEW SECTION
-Container for featured content
-*/
 #whatsnewsection {
     padding: 2rem, 2rem; /* Large padding */
     text-align: center; /* Centered content */
     margin: 2rem; /* Outer spacing */
 }
-
-    /* 
-WHAT'S NEW SECTION HEADING
-Title within featured section
-*/
     #whatsnewsection h2 {
         font-size: 36px; /* Large text */
         text-align: center; /* Centered text */
         margin-bottom: 100px; /* Large bottom spacing */
-    }
-
-    /* 
-WHAT'S NEW SECTION PARAGRAPHS
-Text styling in featured section
-*/
+    } 
     #whatsnewsection p {
         line-height: 1.5; /* Line spacing */
         text-align: center; /* Centered text */
     }
-
-/* 
-OTHER SOFTWARE SECTION
-Container for additional products
-*/
 #othersoftwaresection {
     display: flex; /* Enables flexbox */
     flex-direction: row; /* Horizontal layout */
     justify-content: space-evenly; /* Even distribution */
     align-items: center; /* Centers vertically */
 }
-
-/* 
-PRIVACY POLICY SECTION
-Legal content container
-*/
 #privacy {
     text-align: center; /* Centered content */
     margin-top: 50px; /* Top spacing */
     padding: 0 5%; /* Horizontal padding */
-}
-
-    /* 
-PRIVACY POLICY HEADING
-Title for legal section
-*/
+}  
     #privacy h2 {
         font-size: 36px; /* Large text */
         margin-bottom: 20px; /* Bottom spacing */
         text-decoration: none; /* Underlined text */
     }
 
-/* 
-CONTACT US SECTION
-Main container for contact page
-*/
 #contactus-section {
     display: flex; /* Enables flexbox */
     justify-content: center; /* Centers horizontally */
@@ -795,34 +554,19 @@ Main container for contact page
     align-items: center; /* Centers vertically */
     margin: auto; /* Automatic margins */
 }
-
-/* 
-GAMES SECTION
-Container for games showcase
-*/
 #games {
     text-align: center; /* Centered content */
 }
-
-    /* 
-GAMES SECTION HEADING
-Title for games showcase
-*/
     #games h2 {
         font-size: 36px; /* Large text */
-    }
-
-    /* 
-GAMES SECTION IMAGES
-Styling for game showcase images
-*/
-    #games img {
-        display: block; /* Block display */
-        margin: auto; /* Centers images */
-        width: 400px; /* Fixed width */
-        height: auto; /* Flexible height */
-        margin: 0 10px; /* Horizontal spacing */
-    }
+    }    
+        #games img {
+            display: block; /* Block display */
+            margin: auto; /* Centers images */
+            width: 400px; /* Fixed width */
+            height: auto; /* Flexible height */
+            margin: 0 10px; /* Horizontal spacing */
+        }
 
 /* 
 =============================================
