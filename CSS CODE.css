@@ -1,4 +1,4 @@
-/* 
+﻿/* 
 =============================================
 GENERAL STYLING SECTION
 This section contains global styles that affect 
@@ -37,8 +37,7 @@ body {
     min-height: 100%; /* Ensures body fills viewport height */
     min-width: 100%; /* Ensures body fills viewport width */
     /*
-        background-image: url('./IMAGES/BACKGROUND.png'); /* Full-page background image 
-
+        background-image: url('./IMAGES/BACKGROUND.png'); /* Full-page background image
     */
     background-size: cover; /* Scales image to cover entire element */
     background-attachment: fixed; /* Background stays fixed during scrolling */
@@ -46,7 +45,7 @@ body {
     background-position: center; /* Centers background image */
     box-sizing: inherit; /* Inherits box model from HTML */
     position: relative; /* Establishes positioning context */
-    padding-bottom: 6.74rem; /* Creates space for footer */
+    padding-bottom: 4rem; /* Creates space for footer */
 }
 
 /* 
@@ -93,10 +92,11 @@ Includes hover effects and transitions
         nav li a {
             color: yellow; /* Link text color */
             text-decoration: none; /* Removes underline */
-            padding: 14px 16px; /* Clickable area padding */
+            padding: 0rem; /* Clickable area padding */
+            padding-top: 0rem;
             display: flex; /* Enables flexbox for alignment */
             align-items: center; /* Vertically centers link contents */
-            font-size: 20px; /* Link text size */
+            font-size: 1.5rem; /* Link text size */
             margin: 0; /* Removes margin */
         }
 
@@ -126,19 +126,20 @@ Fixed position overlay with blur effect
 .sidebar {
     position: fixed; /* Stays in place during scroll */
     top: 0; /* Anchors to top */
-    right: 0; /* Anchors to right */
+    right: 0rem; /* Anchors to right */
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
     z-index: 999; /* Stacks above other content */
     background-color: #262a2b; /* Dark gray background */
-    opacity: 0.98; /* Slightly transparent */
+    opacity: 1; /* Slightly transparent */
     backdrop-filter: blur(10px); /* Background blur effect */
     display: none; /* Hidden by default */
     flex-direction: column; /* Vertical stacking */
     align-items: flex-start; /* Left-aligns items */
     justify-content: flex-start; /* Aligns to top */
     text-align: center; /* Centers text */
-    padding-left: calc(100% - 200px); /* Calculated padding */
+    padding-left: 10rem; /* Or any other desired pixel value */
+    padding-top: 14rem;
 }
 
     /* 
@@ -155,10 +156,13 @@ SIDEBAR LINKS
 Styled links in mobile menu
 */
     .sidebar a {
-        justify-content: center; /* Centers content */
-        margin: 1rem; /* Spacing around links */
-        height: 100%; /* Full height */
-        width: 100%; /* Full width */
+        justify-content: flex-start; /* Change from flex-end to flex-start */
+        margin-left: -7rem;
+        margin-top: -14.6rem;
+        height: 100%;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: left; /* Add this to ensure text itself aligns left if it's not a flex item */
     }
 
 /* 
@@ -166,7 +170,7 @@ SITE LOGO
 Main logo styling in header
 */
 .logo {
-    height: 60px; /* Fixed height */
+    height: 3.125rem; /* Fixed height */
     margin-right: 50px; /* Spacing from nav items */
 }
 
@@ -208,9 +212,11 @@ Styles for page/section titles
     text-align: center; /* Centers text */
     padding: 0px 0; /* No padding */
     border-bottom: 0px solid yellow; /* Border option */
-    font-size: 24px; /* Text size */
-    animation: none; /* Glowing effect */
+    animation: glowContinuous 3s linear infinite;
 }
+    .title-container h1 {
+        font-size: 2.5rem; /* Text size */
+    }
 
 /* 
 SUBTITLE CONTAINER
@@ -219,88 +225,79 @@ Styles for secondary headings
 .subtitle-container {
     width: 60%; /* Constrained width */
     margin: 0 auto; /* Centers container */
-    text-align: justify; /* Justified text */
+    text-align: center; /* Justified text */
     padding: 0px; /* No padding */
     border: 0px solid yellow; /* Border option */
-    font-size: 24px; /* Text size */
     text-decoration: none; /* Underlined text */
-    animation: none; /* Pulsing animation */
+    animation: none;
 }
+    .subtitle-container h2 {
+        font-size: 3rem; /* Text size */
+      
+    }
 
-/* 
-PARAGRAPH CONTAINER
-Standard text content styling
-*/
-.paragraph-container {
+.subheading-container {
     width: 60%; /* Constrained width */
     margin: 0 auto; /* Centers container */
-    text-align: justify; /* Justified text */
+    text-align: center; /* Justified text */
+    padding: 0px; /* No padding */
     border: 0px solid yellow; /* Border option */
-    font-size: 22px; /* Text size */
+    text-decoration: none; /* Underlined text */
+    animation: none;
+}
+    .subheading-container h2 {
+        font-size: 1rem; /* Text size */
+    }
+
+.paragraph-container {
+    width: 90%; /* Constrained width */
+    margin: 0 auto; /* Centers container */
+    text-align: center; /* Justified text */
+    border: 0px solid yellow; /* Border option */
+    font-size: 2rem; /* Text size */
 }
 
-/* 
-FOOTER CONTAINER
-Styles for page footer
-*/
+.labeltext-container-title {
+    font-size: 2.2rem; /* Text size */
+}
+    .labeltext-container {
+    font-size: 1.2rem; /* Text size */
+}
+
 .footer-container {
     width: 100%; /* Full width */
     max-width: 1200px; /* Maximum width */
     margin: 0 auto; /* Centers container */
 }
-
-    /* 
-FOOTER PARAGRAPHS
-Text styling within footer
-*/
     .footer-container p {
         margin: 0; /* No margin */
-        font-size: 22px; /* Text size */
+        font-size: 1.5rem; /* Text size */
         width: 100%; /* Full width */
         text-align: center; /* Centered text */
         line-height: 0.8; /* Tighter line spacing */
     }
 
-/* 
-GLOBAL SUBTEXT
-Standard styling for secondary text
-*/
-.golbalsubtext-container {
-    font-size: 22px; /* Text size */
+.fullscreen-section {
+    padding: 2rem, 2rem; /* Large padding */
+    text-align: center; /* Centered content */
+    margin: 2rem; /* Outer spacing */
 }
-
-/* 
-=============================================
-WHAT'S NEW SECTION STYLES - MATCHING OTHER SOFTWARE
-Featured content boxed images styling
-=============================================
-*/
-
-/* 
-WHATS NEW CONTAINER
-Flexbox container like othersoftware-container
-*/
-.whatsnewimage-container {
+.fullscreen-section-image {
     display: flex; /* Use flexbox */
     flex-wrap: wrap; /* Allow boxes to wrap to next line */
     justify-content: center; /* Center boxes horizontally */
-    gap: 20px; /* Spacing between boxes */
-    padding: 20px; /* Some padding around */
+    gap: 1rem; /* Spacing between boxes */
+    padding: 1rem; /* Some padding around */
     max-width: 1800px; /* Optional max width */
     margin: 0 auto; /* Center container on page */
 }
 
-
-/* 
-WHATS NEW ITEM
-Each image inside its own boxed card just like othersoftware-item
-*/
 .whatsnew-item {
     box-sizing: border-box; /* THIS IS THE MAGIC FIX */
     width: calc(33.33% - 20px);
-    padding: 5px; /* Shrink the padding so images have more space */
-    width: 550px; /* Fixed width like othersoftware-item */
-    height: 320px; /* Fixed height for consistent boxes */
+    padding: 1rem; /* Shrink the padding so images have more space */
+    width: 34.5rem; /* Fixed width like othersoftware-item */
+    height: 21rem; /* Fixed height for consistent boxes */
     background-color: #262a2b; /* Same dark background */
     border: 4px solid black; /* Same thick border */
     border-radius: 10px; /* Rounded corners */
@@ -311,43 +308,19 @@ Each image inside its own boxed card just like othersoftware-item
     align-items: center; /* Center image horizontally */
     padding: 1rem; /* Inner padding */
     transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover */
-    text-align: center; /* Center text if any */
 }
-
-    /* 
-WHATS NEW IMAGE
-Style the image inside the box
-*/
     .whatsnew-item img {
         width: 100%; /* Image fills the container width */
         height: auto; /* Keep aspect ratio */
         display: block; /* Remove tiny gaps below images */
         border-radius: 4px; /* Keep edges smooth */
     }
-
-
-    /* 
-WHATS NEW ITEM HOVER
-Hover effect same as othersoftware-item hover
-*/
     .whatsnew-item:hover {
         transform: scale(1.1); /* Scale up on hover */
         background-color: forestgreen; /* Background color change */
     }
 
-
-/* 
-=============================================
-OTHER SOFTWARE SECTION STYLES
-Product showcase styling
-=============================================
-*/
-
-/* 
-OTHER SOFTWARE CONTAINER
-Flexbox grid for product cards
-*/
-.othersoftware-container {
+.gridsoftware-container {
     display: flex; /* Enables flexbox for layout */
     flex-wrap: wrap; /* Allows items to wrap to next line if needed */
     justify-content: center; /* Horizontally centers all cards */
@@ -358,234 +331,111 @@ Flexbox grid for product cards
     max-width: 1800px; /* Stops it gettin' stupid wide on big screens */
     margin: 0 auto; /* Centers the whole container in the page */
 }
-
-/* 
-OTHER SOFTWARE ITEMS
-Individual product card styling
-*/
-.othersoftware-item {
-    width: 450px; /* Fixed width so all cards match */
-    height: 400px; /* Fixed height to keep that square look */
-    background-color: #262a2b; /* Dark background for edginess */
-    border: 4px solid black; /* Thick black border round the box */
-    border-radius: 10px; /* Slight rounding on corners to soften it up */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sexy dark shadow for some depth */
-    text-align: center; /* Centers all text inside the card */
-    display: flex; /* Lets us lay out content vertically */
-    flex-direction: column; /* Stack the contents vertically (title > img > text) */
-    justify-content: space-between; /* Space out the content top to bottom */
-    padding: 1rem; /* Inner spacing so content doesn�t kiss the edges */
-    transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
-}
-
-    /* 
-OTHER SOFTWARE HEADINGS
-Title styling within product cards
-*/
-    .othersoftware-item h2 {
-        font-size: 1.4rem; /* Reasonably chunky font size for titles */
-        margin: 0.5rem 0; /* Space above and below the title */
+    .gridsoftware-item {
+        width: 450px; /* Fixed width so all cards match */
+        height: 400px; /* Fixed height to keep that square look */
+        background-color: #262a2b; /* Dark background for edginess */
+        border: 4px solid black; /* Thick black border round the box */
+        border-radius: 10px; /* Slight rounding on corners to soften it up */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sexy dark shadow for some depth */
+        text-align: center; /* Centers all text inside the card */
+        display: flex; /* Lets us lay out content vertically */
+        flex-direction: column; /* Stack the contents vertically (title > img > text) */
+        justify-content: space-between; /* Space out the content top to bottom */
+        padding: 1rem; /* Inner spacing so content doesn’t kiss the edges */
+        transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
     }
+        .gridsoftware-item h2 {
+            font-size: 1.4rem; /* Reasonably chunky font size for titles */
+            margin: 0.5rem 0; /* Space above and below the title */
+        }
+            .gridsoftware-item img {
+                max-width: 100%; /* Makes sure the image never overflows the box */
+                max-height: 200px; /* Caps height so it doesn't dominate the box */
+                object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
+                border-radius: 6px; /* Slight rounding so it matches the card */
+                margin: 0 auto; /* Centers the image horizontally */
+            }
+                .gridsoftware-item:hover {
+                    transform: scale(1.1); /* Make it pop out slightly */
+                    background-color: forestgreen; /* Darkens background slightly on hover */
+                }
 
-    /* 
-OTHER SOFTWARE IMAGES
-Product image styling
-*/
-    .othersoftware-item img {
-        max-width: 100%; /* Makes sure the image never overflows the box */
-        max-height: 200px; /* Caps height so it doesn't dominate the box */
-        object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
-        border-radius: 6px; /* Slight rounding so it matches the card */
-        margin: 0 auto; /* Centers the image horizontally */
-    }
-
-    /* 
-OTHER SOFTWARE HOVER
-Interactive effect for product cards
-*/
-    .othersoftware-item:hover {
-        transform: scale(1.1); /* Make it pop out slightly */
-        background-color: forestgreen; /* Darkens background slightly on hover */
-    }
-
-/* 
-=============================================
-GAMES SECTION STYLES
-Game showcase styling
-=============================================
-*/
-
-/*  
-GAMES SECTION CONTAINER  
-Main flex container that acts like a grid for game cards  
-*/
-.gamesection-container {
+.gridsoftwarewithtext-container {
     display: flex; /* Enables flexbox for layout */
     flex-wrap: wrap; /* Allows items to wrap to next line if needed */
     justify-content: center; /* Horizontally centers all cards */
-    align-items: flex-start; /* Aligns cards to the top of each row */
+    align-items: center; /* Aligns cards to the top of each row */
     gap: 2.5rem; /* Spacing between each card */
-    padding: 2rem; /* Padding around the grid */
+    padding-top: 0rem; /* Padding around the grid */
     width: 100%; /* Full width of the parent */
     max-width: 1800px; /* Stops it gettin' stupid wide on big screens */
     margin: 0 auto; /* Centers the whole container in the page */
 }
+    .gridsoftwarewithtext-item {
+        width: 20rem; /* Fixed width so all cards match */
+        height: 15rem; /* Fixed height to keep that square look */
+        background-color: #262a2b; /* Dark background for edginess */
+        border: 4px solid black; /* Thick black border round the box */
+        border-radius: 10px; /* Slight rounding on corners to soften it up */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sexy dark shadow for some depth */
+        text-align: center; /* Centers all text inside the card */
+        display: flex; /* Lets us lay out content vertically */
+        flex-direction: column; /* Stack the contents vertically (title > img > text) */
+        justify-content: center; /* Space out the content top to bottom */
+        padding: 1rem; /* Inner spacing so content doesn’t kiss the edges */
+        transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
+    }
+        .gridsoftwarewithtext-item h2 {
+            font-size: 1.4rem; /* Reasonably chunky font size for titles */
+            margin: 0.5rem 0; /* Space above and below the title */
+        }
+            .gridsoftwarewithtext-item img {
+                max-width: 100%; /* Makes sure the image never overflows the box */
+                max-height: 8rem; /* Caps height so it doesn't dominate the box */
+                object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
+                border-radius: 6px; /* Slight rounding so it matches the card */
+                margin: 0 auto; /* Centers the image horizontally */
+            }
+                .gridsoftwarewithtext-item:hover {
+                    transform: scale(1.1); /* Make it pop out slightly */
+                    background-color: forestgreen; /* Darkens background slightly on hover */
+                }
 
-/*  
-GAMES SECTION ITEM  
-Each game card styling (like a sexy icon box)  
-*/
-.gamesection-item {
-    width: 450px; /* Fixed width so all cards match */
-    height: 400px; /* Fixed height to keep that square look */
-    background-color: #262a2b; /* Dark background for edginess */
-    border: 4px solid black; /* Thick black border round the box */
-    border-radius: 10px; /* Slight rounding on corners to soften it up */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sexy dark shadow for some depth */
-    text-align: center; /* Centers all text inside the card */
-    display: flex; /* Lets us lay out content vertically */
-    flex-direction: column; /* Stack the contents vertically (title > img > text) */
-    justify-content: space-between; /* Space out the content top to bottom */
-    padding: 1rem; /* Inner spacing so content doesn�t kiss the edges */
-    transition: transform 0.3s ease, background-color 0.2s ease; /* Smooth hover effects */
+.socials-container {
+    display: flex; /* Enables flexbox */
+    flex-direction: row;
+    justify-content: space-between; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; /* Centered text */
+    margin: auto; /* Automatic margins */
+}    
+        .socials-container img {
+            width: 5rem; /* Fixed width */
+            height: auto; /* Flexible height */
+            margin: auto; /* Automatic margins */
+        }
+.socials-container-item {
 }
-
+        .socials-container-item:hover {
+            transform: scale(1.1); /* Make it pop out slightly */
+            background-color: forestgreen; /* Darkens background slightly on hover */
+        }
     /*  
-GAMES SECTION ITEM HOVER  
-Interactive zoom effect when you hover your mouse over the card  
-*/
-    .gamesection-item:hover {
-        transform: scale(1.1); /* Make it pop out slightly */
-        background-color: forestgreen; /* Darkens background slightly on hover */
-    }
-
-    /*  
-GAMES SECTION HEADINGS  
-Styling for the game title text inside each card  
-*/
-    .gamesection-item h2 {
-        font-size: 26px; /* Reasonably chunky font size for titles */
-        margin: 0.5rem 0; /* Space above and below the title */            
-    }
-
-    /*  
-GAMES SECTION IMAGES  
-Styling for the game image thumbnail  
-*/
-    .gamesection-item img {
-        max-width: 100%; /* Makes sure the image never overflows the box */
-        max-height: 200px; /* Caps height so it doesn't dominate the box */
-        object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
-        border-radius: 6px; /* Slight rounding so it matches the card */
-        margin: 0 auto; /* Centers the image horizontally */
-    }
-
-/*  
 GAMES SECTION SUBTEXT  
 Styling for the game description paragraph  
 */
-.golbalsubtext-container p {
-    font-size: 1.5rem; /* Bit smaller text to fit more info in */
-    margin: 0.5rem 0 0; /* Tiny bit of space above, no bottom margin */
-    color: yellow; /* Make the title readable against dark background */
-}
-
-
-/* 
-=============================================
-FORUMS SECTION STYLES
-Discussion board styling
-=============================================
-*/
-
-/* 
-FORUMS CONTAINER
-Basic layout for forums section
-*/
-.forums-container {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-}
-
-/* 
-=============================================
-ABOUT US SECTION STYLES
-Company information styling
-=============================================
-*/
-
-/* 
-ABOUT US CONTAINER
-Layout for about us content
-*/
-.aboutus-container {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    text-align: center; /* Centered text */
-    margin: auto; /* Automatic margins */
-}
-
-    /* 
-ABOUT US PARAGRAPHS
-Text styling for about us content
-*/
-    .aboutus-container p {
-        display: flex; /* Enables flexbox */
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
-        max-width: 1000px; /* Maximum width */
-        line-height: 1.5; /* Line spacing */
+    .golbalsubtext-container p {
+        font-size: 1.5rem; /* Bit smaller text to fit more info in */
+        margin: 0.5rem 0 0; /* Tiny bit of space above, no bottom margin */
+        color: yellow; /* Make the title readable against dark background */
     }
 
-/* 
-=============================================
-CONTACT US SECTION STYLES
-Contact information and form styling
-=============================================
-*/
 
-/* 
-CONTACT US CONTAINER
-Layout for contact section
-*/
-.contactus-container {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    text-align: center; /* Centered text */
-    margin: auto; /* Automatic margins */
-}
 
-/* 
-CONTACT US CONTENT
-Spacing for contact content
-*/
-.contactus-content {
-    margin-top: 200px; /* Top spacing */
-}
 
-/* 
-CONTACT US PARAGRAPHS
-Text styling for contact content
-*/
-.contactus-container p {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    max-width: 1000px; /* Maximum width */
-    line-height: 1.5; /* Line spacing */
-}
 
-/* 
-CONTACT US IMAGES
-Styling for contact section images
-*/
-.contactus-container img {
-    width: 200px; /* Fixed width */
-    height: auto; /* Flexible height */
-    margin: auto; /* Automatic margins */
-}
+
 
 /* 
 =============================================
@@ -668,11 +518,14 @@ Main container for game page content
 */
 .gamecontent-container {
     padding-top: 5rem; /* Top spacing */
+    padding-bottom: 1rem;
     flex-wrap: wrap; /* Allows wrapping */
     display: flex; /* Enables flexbox */
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
     align-content: center; /* Centers content */
+    gap: 10px;
+    padding: 10px;
 }
 
     /* 
@@ -876,9 +729,9 @@ WHAT'S NEW SECTION
 Container for featured content
 */
 #whatsnewsection {
-    padding: 20rem, 20rem; /* Large padding */
+    padding: 2rem, 2rem; /* Large padding */
     text-align: center; /* Centered content */
-    margin: 5rem; /* Outer spacing */
+    margin: 2rem; /* Outer spacing */
 }
 
     /* 
@@ -978,124 +831,74 @@ Keyframe animations for interactive elements
 =============================================
 */
 
-/* 
-GROW/SHRINK ANIMATION
-Pulsing scale effect
-*/
 @keyframes grow-shrink {
     from {
         transform: scale(1); /* Normal size */
     }
-
     to {
         transform: scale(1.1); /* Slightly larger */
     }
 }
-
-/* 
-PULSE ANIMATION
-Gentle pulsing effect
-*/
 @keyframes pulse {
     0% {
         transform: scale(1); /* Normal size */
     }
-
     50% {
         transform: scale(1.1); /* Slightly larger */
     }
-
     100% {
         transform: scale(1); /* Back to normal */
     }
 }
-
-/* 
-CONTINUOUS ROTATION
-Infinite spinning animation
-*/
 @keyframes rotateContinuous {
     from {
         transform: rotate(0deg); /* Starting position */
     }
-
     to {
         transform: rotate(360deg); /* Full rotation */
     }
 }
-
-/* 
-CONTINUOUS SCALING
-Pulsing size animation
-*/
 @keyframes scaleContinuous {
     0% {
         transform: scale(1); /* Normal size */
     }
-
     50% {
         transform: scale(1.1); /* Slightly larger */
     }
-
     100% {
         transform: scale(1); /* Back to normal */
     }
 }
-
-/* 
-COLOR CHANGE ANIMATION
-Cycling through colors
-*/
 @keyframes colorChangeContinuous {
     0% {
         color: red; /* Red */
     }
-
     50% {
         color: blue; /* Blue */
     }
-
     100% {
         color: green; /* Green */
     }
 }
-
-/* 
-FADE ANIMATION
-Fading in and out
-*/
 @keyframes fadeContinuous {
     0% {
         opacity: 0; /* Invisible */
     }
-
     50% {
         opacity: 1; /* Fully visible */
     }
-
     100% {
         opacity: 0; /* Invisible again */
     }
 }
-
-/* 
-BOUNCE ANIMATION
-Up and down movement
-*/
 @keyframes bounceContinuous {
     0%, 100% {
         transform: translateY(0); /* Normal position */
     }
-
     50% {
         transform: translateY(-20px); /* Moves up */
     }
 }
-
-/* 
-GLOW ANIMATION
-Pulsing glow effect
-*/
 @keyframes glowContinuous {
     0% {
         text-shadow: 0 0 5px #1DB954, 0 0 10px #228B22;
@@ -1107,12 +910,6 @@ Pulsing glow effect
         text-shadow: 0 0 5px #1DB954, 0 0 10px #228B22;
     }
 }
-
-
-/* 
-FADE IN ANIMATION
-Element appears gradually
-*/
 @keyframes fadeIn {
     from {
         opacity: 0; /* Invisible */
@@ -1122,45 +919,27 @@ Element appears gradually
         opacity: 1; /* Fully visible */
     }
 }
-
-/* 
-FADE OUT ANIMATION
-Element disappears gradually
-*/
 @keyframes fadeOut {
     from {
         opacity: 1; /* Fully visible */
     }
-
     to {
         opacity: 0; /* Invisible */
     }
 }
-
-/* 
-BOUNCE IN ANIMATION
-Element bounces into view
-*/
 @keyframes bounceIn {
     from {
         transform: scale(0.3); /* Very small */
         opacity: 0; /* Invisible */
     }
-
     70% {
         transform: scale(1.1); /* Overshoots */
     }
-
     to {
         transform: scale(1); /* Normal size */
         opacity: 1; /* Fully visible */
     }
 }
-
-/* 
-SLIDE IN FROM LEFT
-Element slides in from left
-*/
 @keyframes slideInLeft {
     from {
         transform: translateX(-100%); /* Off-screen left */
@@ -1170,11 +949,6 @@ Element slides in from left
         transform: translateX(0); /* Normal position */
     }
 }
-
-/* 
-ZOOM IN ANIMATION
-Element scales from small to normal
-*/
 @keyframes zoomIn {
     from {
         transform: scale(0); /* Invisible */
@@ -1184,11 +958,6 @@ Element scales from small to normal
         transform: scale(1); /* Normal size */
     }
 }
-
-/* 
-ROTATE ANIMATION
-Single full rotation
-*/
 @keyframes rotate {
     from {
         transform: rotate(0deg); /* Starting rotation */
@@ -1206,110 +975,46 @@ Ready-to-use animation classes
 =============================================
 */
 
-/* 
-PULSE EFFECT
-Continuous gentle pulsing
-*/
 .pulse {
     animation: pulse 1s infinite alternate; /* Repeating animation */
 }
-
-/* 
-FADE IN
-Element fades into view
-*/
 .fade-in {
     opacity: 0; /* Starts invisible */
     animation: fadeIn 1s ease-in-out forwards; /* Animates to visible */
 }
-
-/* 
-FADE OUT
-Element fades out of view
-*/
 .fade-out {
     animation: fadeOut 1s ease forwards; /* Animates to invisible */
 }
-
-/* 
-BOUNCE IN
-Element bounces into view
-*/
 .bounce-in {
     animation: bounceIn 1s ease forwards; /* Bounce animation */
 }
-
-/* 
-SLIDE IN FROM LEFT
-Element slides from left
-*/
 .slide-in-left {
     transform: translateX(-100%); /* Starts off-screen */
     animation: slideInLeft 1s ease-in-out forwards; /* Slides in */
 }
-
-/* 
-ZOOM IN
-Element scales up from small
-*/
 .zoom-in {
     transform: scale(0); /* Starts small */
     animation: zoomIn 0.5s ease-in-out forwards; /* Scales up */
 }
-
-/* 
-ROTATE
-Single rotation animation
-*/
 .rotate {
     transform: rotate(0); /* Starting rotation */
     animation: rotate 1s linear forwards; /* Rotates once */
 }
-
-/* 
-CONTINUOUS ROTATION
-Infinite spinning
-*/
 .rotate-continuous {
     animation: rotateContinuous 2s linear infinite; /* Never stops */
 }
-
-/* 
-CONTINUOUS SCALING
-Pulsing size effect
-*/
 .scale-continuous {
     animation: scaleContinuous 2s ease-in-out infinite; /* Continuous */
 }
-
-/* 
-COLOR CHANGE
-Cycling through colors
-*/
 .color-change-continuous {
     animation: colorChangeContinuous 3s linear infinite; /* Continuous */
 }
-
-/* 
-FADE CONTINUOUS
-Fading in and out
-*/
 .fade-continuous {
     animation: fadeContinuous 2s ease infinite; /* Continuous */
 }
-
-/* 
-BOUNCE CONTINUOUS
-Up and down movement
-*/
 .bounce-continuous {
     animation: bounceContinuous 2s ease infinite; /* Continuous */
 }
-
-/* 
-GLOW CONTINUOUS
-Pulsing glow effect
-*/
 .glow-continuous {
     animation: glowContinuous 3s linear infinite; /* Continuous */
 }
@@ -1321,28 +1026,23 @@ Styles for screens under 728px wide
 =============================================
 */
 @media screen and (max-width: 728px) {
-    /* Hide elements on mobile */
+
     .hideonmobile {
         display: none;
     }
-
-    /* Full-width mobile sidebar */
     .sidebar {
-        width: 100%;
+        width: 0%;
     }
-
-    /* Mobile navigation styling */
     nav {
         background-color: #262a2b;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 5px 5px;
+        padding: 5px 0px;
         width: 100%;
         margin: 0;
     }
-
         /* Reversed mobile nav list */
         nav ul {
             list-style-type: none;
@@ -1354,16 +1054,122 @@ Styles for screens under 728px wide
             flex-direction: row-reverse;
             margin: 0;
         }
-
-    /* Mobile title styling */
     .title-container {
-        text-align: center;
-        padding: 0px 0;
-        border-bottom: 0px solid yellow;
-        font-size: 24px;
-        text-align: center;
+        text-align: center; /* Centers text */
+        padding: 0px 0; /* No padding */
+        border-bottom: 0px solid yellow; /* Border option */
         animation: glowContinuous 3s linear infinite;
     }
+        .title-container h1 {
+            font-size: 1.3rem; /* Text size */
+        }
+    .subtitle-container {
+        width: 60%; /* Constrained width */
+        margin: 0 auto; /* Centers container */
+        text-align: center; /* Justified text */
+        padding: 0px; /* No padding */
+        border: 0px solid yellow; /* Border option */
+        text-decoration: none; /* Underlined text */
+        animation: none;
+    }
+        .subtitle-container h2 {
+            font-size: 1.3rem; /* Text size */
+        }
+    .subheading-container {
+        width: 60%; /* Constrained width */
+        margin: 0 auto; /* Centers container */
+        text-align: center; /* Justified text */
+        padding: 0px; /* No padding */
+        border: 0px solid yellow; /* Border option */
+        text-decoration: none; /* Underlined text */
+        animation: none;
+    }
+        .subheading-container h2 {
+            font-size: 1rem; /* Text size */
+        }
+    .paragraph-container {
+        width: 100%; /* Constrained width */
+        margin: 0 auto; /* Centers container */
+        text-align: justify; /* Justified text */
+        border: 0px solid yellow; /* Border option */
+        font-size: 0.8rem; /* Text size */
+    }
+    .footer-container {
+        width: 100%; /* Full width */
+        height: auto;
+        margin: 0 auto; /* Centers container */
+    }
+        .footer-container p {
+            margin: 0; /* No margin */
+            font-size: 14px; /* Text size */
+            width: 100%; /* Full width */
+            text-align: center; /* Centered text */
+            line-height: 0.8; /* Tighter line spacing */
+        }
+    .whatsnewimage-container {
+        display: flex; /* Enables flexbox for layout */
+        flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+        justify-content: center; /* Horizontally centers all cards */
+        align-items: center; /* Aligns cards to the top of each row */
+        gap: 0rem; /* Spacing between each card */
+        padding: 0rem; /* Padding around the grid */
+        width: 100%; /* Full width of the parent */
+        margin: 0 auto; /* Centers the whole container in the page */
+    }
+    .whatsnew-item {
+        max-width: 100%; /* Makes sure the image never overflows the box */
+        max-height: 10rem; /* Caps height so it doesn't dominate the box */
+        object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
+        border-radius: 6px; /* Slight rounding so it matches the card */
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+            .whatsnew-item img {
+                width: 100%;
+                height: auto;
+            }
+                .whatsnew-item:hover {
+                    transform: scale(1); /* Scale up on hover */
+                    background-color: forestgreen; /* Background color change */
+                }
+    .gridsoftwarewithtext-container {
+        display: flex; /* Enables flexbox for layout */
+        flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+        justify-content: center; /* Horizontally centers all cards */
+        align-items: center; /* Aligns cards to the top of each row */
+        gap: 1.5rem; /* Spacing between each card */
+        padding: 0rem; /* Padding around the grid */
+        width: 100%; /* Full width of the parent */        
+        margin: 0 auto; /* Centers the whole container in the page */
+    }
+    .gridsoftwarewithtext-item {
+        width: 12rem; /* Fixed width so all cards match */
+        height: 15rem; /* Fixed height to keep that square look */
+        background-color: #262a2b; /* Dark background for edginess */
+        border: 4px solid black; /* Thick black border round the box */
+        border-radius: 10px; /* Slight rounding on corners to soften it up */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sexy dark shadow for some depth */
+        text-align: center; /* Centers all text inside the card */
+        display: flex; /* Lets us lay out content vertically */
+        flex-direction: column; /* Stack the contents vertically (title > img > text) */
+        justify-content: center; /* Space out the content top to bottom */
+        align-items: center;
+        padding: 1rem; /* Inner spacing so content doesn’t kiss the edges */       
+    }
+            .gridsoftwarewithtext-item h2 {
+                font-size: 1.4rem; /* Reasonably chunky font size for titles */
+                margin: 0.5rem 0; /* Space above and below the title */
+            }
+                .gridsoftwarewithtext-item img {
+                    max-width: 100%; /* Makes sure the image never overflows the box */
+                    max-height: 10rem; /* Caps height so it doesn't dominate the box */
+                    object-fit: contain; /* Keeps aspect ratio and fits nicely inside */
+                    border-radius: 6px; /* Slight rounding so it matches the card */
+                    margin: 0 auto; /* Centers the image horizontally */
+                }
+                    .gridsoftwarewithtext-item:hover {
+                        transform: scale(1); /* Make it pop out slightly */
+                        background-color: forestgreen; /* Darkens background slightly on hover */
+                    }
 }
 
 /* 
@@ -1373,31 +1179,32 @@ Styles for screens 729px and wider
 =============================================
 */
 @media screen and (min-width: 729px) {
-    /* Hide elements on desktop */
-    .hideondesktop {
-        display: none;
-    }
-
-    /* Desktop navigation styling */
-    nav {
-        background-color: #262a2b;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px 5px;
-        margin: 0;
-        min-height: 20px; /* Explicit height control */
-    }
-
-        /* Desktop nav list styling */
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-between;
-            flex-grow: 1;
-            margin: 0;
+        /* Hide elements on desktop */
+        .hideondesktop {
+            display: none;
         }
-}
+
+        /* Desktop navigation styling */
+        nav {
+            background-color: #262a2b;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 5px;
+            margin: 0;
+            min-height: 20px; /* Explicit height control */
+        }
+
+            /* Desktop nav list styling */
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                flex-grow: 1;
+                margin: 0;
+            }
+    }
+
